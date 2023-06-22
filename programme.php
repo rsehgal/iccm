@@ -169,6 +169,8 @@ $('.iccmMenu').on('click',function(event){
 	  });
 
 });
+
+$("#Home").trigger("click");
 });
 </script>
 
