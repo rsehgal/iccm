@@ -5,6 +5,585 @@ require_once "Forms.php";
 require_once "DB.php";
 require_once "helpers2.php";
 
+function Home(){
+    $homeMsg='<div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-main.jpg); background-attachment:fixed; padding-top:50px; padding-bottom:50px;">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7 col-md-6">
+                <div class="section-header text-left" style="margin-bottom: 25px !important;">
+                    <h3 style="text-decoration:underline;"><strong>INTRODUCTION</strong></h3>
+                </div>
+                <div class="about-text">
+                    <p align="justify">
+                       CARBON is a unique material with wide range of structures and properties. Though the research on carbon based materials started centuries ago, the interest has renewed with the advent of newer and exotic forms of carbon. The Indian Carbon Society, formed in 1979, has been organizing conferences on carbon materials at regular intervals till the pandemic disrupted the world. Since the last conference on Carbon Materials in 2019, when the researchers, students and industry representative met physically, there has been a gap of 4 years. To rejuvenate the researchers and the practitioners, the Maharashtra Chapter of Indian Carbon Society along with Materials Group, BARC is pleased to invite you to the <strong>Indian Conference on Carbon Materials (ICCM)-2023</strong> at DAE Convention Centre, Bhabha Atomic Research Centre<strong></strong> during <strong>November 30 - December 2, 2023</strong> and provide you a forum in which the latest scientific and technical developments in the field of  carbon will be discussed. This is an excellent platform for the researchers, academicians, students and industrialists to showcase their works and interact among themselves.
+    <br>
+    <br>
+    
+    
+    <!--<a class="btn" href="#">Read More</a>-->
+    
+    <iframe width="80%" height="215" src="https://www.youtube.com/embed/pzqoV8vEwsI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    
+    
+    
+                  </p>
+                    
+                   <!-- <a class="btn" href="#">Read More</a>-->
+                </div>
+            </div>
+            
+          <div class="col-lg-5 col-md-6" style="margin-top:0 !important; margin-bottom:auto !important;">
+          
+        
+                    
+                 <div class="section-header text-center">
+            
+            <!-- <h5 style="color:#900;"> Conference Will Start in</h5>-->
+             
+             </div>
+    
+          
+          
+          <div style="background-color:none; padding-bottom: 10px;"> <!--padding-top: 20px;-->
+        
+        <div class="countdown" id="js-countdown">
+    <div class="countdown__item countdown__item">
+    <div class="countdown__timer js-countdown-days" aria-labelledby="day-countdown">
+    
+    </div>
+    
+    <div class="countdown__label" id="day-countdown">Days</div>
+    </div>
+    
+    <div class="countdown__item">
+    <div class="countdown__timer js-countdown-hours" aria-labelledby="hour-countdown">
+    
+    </div>
+    
+    <div class="countdown__label" id="hour-countdown">Hours</div>
+    </div>
+    
+    <div class="countdown__item">
+    <div class="countdown__timer js-countdown-minutes" aria-labelledby="minute-countdown">
+    
+    </div>
+    
+    <div class="countdown__label" id="minute-countdown">Minutes</div>
+    </div>
+    
+    <div class="countdown__item">
+    <div class="countdown__timer js-countdown-seconds" aria-labelledby="second-countdown">
+    
+    </div>
+    
+    <div class="countdown__label" id="second-countdown">Seconds</div>
+    
+    <script type="text/javascript">
+    // ========================== //
+    // 2017 Countdown JS
+    // ========================== //
+    
+    const countdown = new Date("November 30, 2023");
+    
+    function getRemainingTime(endtime) {
+    const milliseconds = Date.parse(endtime) - Date.parse(new Date());
+    const seconds = Math.floor( (milliseconds/1000) % 60 );
+    const minutes = Math.floor( (milliseconds/1000/60) % 60 );
+    const hours = Math.floor( (milliseconds/(1000*60*60)) % 24 );
+    const days = Math.floor( milliseconds/(1000*60*60*24) );
+    
+    return {
+    "total": milliseconds,
+    "seconds": seconds,
+    "minutes": minutes,
+    "hours": hours,
+    "days": days,
+    };
+    }
+    
+    function initClock(id, endtime) {
+    const counter = document.getElementById(id);
+    const daysItem = counter.querySelector(".js-countdown-days");
+    const hoursItem = counter.querySelector(".js-countdown-hours");
+    const minutesItem = counter.querySelector(".js-countdown-minutes");
+    const secondsItem = counter.querySelector("".js-countdown-seconds");
+    
+    function updateClock() {
+    const time = getRemainingTime(endtime);
+    
+    daysItem.innerHTML = time.days;
+    hoursItem.innerHTML = ("0" + time.hours).slice(-2);
+    minutesItem.innerHTML = ("0" + time.minutes).slice(-2);
+    secondsItem.innerHTML = ("0" + time.seconds).slice(-2);
+    
+    if (time.total <= 0) {
+    clearInterval(timeinterval);
+    }
+    }
+    
+    updateClock();
+    const timeinterval = setInterval(updateClock, 1000);
+    }
+    
+    initClock("js-countdown", countdown);
+    
+    
+    
+    
+    // ========================== //
+    // 2013 Countdown JS
+    // ========================== //
+    
+    // function counter() {
+    //   var today = new Date(); //variable contains current date and time
+    
+    //   var days = calcDays(today); //calculate the time left until set date below
+    //   document.countDown.daysLeft.value = Math.floor(days); // displays days rounded to the next lowest integer
+    
+    //   var hours = (days - Math.floor(days)) * 24; //calculate the hours left in the current day
+    //   document.countDown.hrLeft.value = Math.floor(hours); // display hours rounded to the next lowest integer
+    
+    //   var minutes = (hours - Math.floor(hours)) * 60; // calculate the minutes left in the current hour
+    //   document.countDown.minLeft.value = Math.floor(minutes); // display minutes rounded to the next lowest integer
+    
+    //   var seconds = (minutes - Math.floor(minutes)) * 60; //calculate the seconds left in the current minute
+    //   document.countDown.secLeft.value = Math.floor(seconds); // display seconds rounded to the next lowest integer
+    // }
+    
+    // function calcDays(currentDate) {
+    //   //create a date object for date of graduation
+    //   //calculate the difference between currentDate and set date
+    //   setDate = new Date("May 6, 2013");
+    //   currentTime = currentDate.getFullYear() + 1;
+    //   setDate.setFullYear(currentTime);
+    
+    //   days = (setDate - currentDate) / (1000 * 60 * 60 * 24);
+    //   return days;
+    // }
+    
+    // setInterval("counter()", 1000)
+    </script>
+    </div>
+    </div>
+            
+        
+        <!--	<div class="hs-featured-excerpt">
+            CardioAlex 2017 Presentations
+    
+    
+            </div>-->
+        
+       
+                        
+            </div>
+          
+          
+                
+                <div class="about-text">
+                    
+                    <div class="table-responsive">
+                    
+                    
+    
+    <table width="100%" border="0">
+    
+    <tr style="font-size:16px; color:#FFF;">
+    <td width="50%" align="center" valign="top" bgcolor="#29297a" style="padding-top:10px; padding-bottom:10px;">
+    
+    <strong>Important Updates</strong></td>
+    </tr>
+    
+    <tr style="font-size:15px;">
+    <td width="50%" valign="top" align="center" style="color:#000; height:150px; border-bottom:#000; ">
+    
+    <div class="container">
+    
+    
+    <h1 class="text-red blink-soft">
+    <span style="color:#900;"><strong> Deadline of abstract submission is July 30, 2023 </strong></span> 
+    </h1>
+    <br>
+    
+    
+    <h1 class="text-red blink-hard">
+    <span style="color:#900;"><a><strong>Early bird registration closes on October 01, 2023</strong></a></span> 
+    </h1>
+    <br>
+    
+    
+    
+    </div>
+    
+    
+    </td>
+    </tr>
+    
+    <tr style="font-size:16px; color:#FFF;">
+    <td width="50%" align="center" valign="top" bgcolor="#16679E">
+    
+    </td>
+    </tr>
+    
+    
+    </table>
+    
+    </div>
+    
+                   <!-- <a class="btn" href="#">Read More</a>-->
+                </div>
+            </div>  
+            
+            
+        </div>
+    </div>
+    </div>
+    <!-- About End -->
+    
+    
+    
+    
+    
+    
+    
+    <!-- Fact Start -->
+    
+    <!-- Fact End -->
+    
+    
+    <!-- Service Start -->
+    
+    <!-- Service End -->
+    
+    
+    
+    
+    <!-- FAQs Start -->
+    <!-- Org committee Start -->
+    
+    
+    <div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-orgcom.jpg); background-attachment:fixed;">
+    <div class="container">
+    
+    <div class="section-header text-center">
+           
+           <br>
+    <br>
+    
+            <h3 style="color:#FFF;"><strong>CONFERENCE OFFICE  BEARERS</strong></h3>
+            
+        </div>
+    
+    <div class="row">
+    
+    
+    <div class="col-lg-2 col-md-12" style="top:-15px !important;">
+                <div class="table-responsive">
+                <table width="100%" border="0">
+    <tr align="center">
+    <td align="center" valign="top">
+    <img src="img/org committee/1.png" width="80%">
+    </td>
+    </tr>
+    <tr style="font-size:15px;">
+    <td width="33%" valign="top" align="center">
+    <p><span style="font-size:14px; color:#FFF"><strong>Dr. Raghvendra Tewari<br>
+    BARC</strong><br>
+    Conference Chairman
+    </span></p>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </div>
+    
+    
+    <div class="col-lg-3 col-md-12" style="top:-15px !important;">
+                <div class="table-responsive">
+                <table width="100%" border="0">
+    <tr align="center">
+    <td align="center" valign="top">
+    <img src="img/org committee/2.png" width="50%" class="logocontrol">
+    <img src="img/org committee/2.png" width="80%" class="logocontrol2">
+    </td>
+    </tr>
+    <tr style="font-size:15px;">
+    <td width="33%" valign="top" align="center">
+    <p><span style="font-size:15px; color:#FFF"><strong>Dr. Ashok K. Arya<br>
+    BARC</strong><br>
+    Conference Co-Chairman</span></p>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </div>
+    
+    
+    <div class="col-lg-2 col-md-12" style="top:-15px !important;">
+                <div class="table-responsive">
+                <table width="100%" border="0">
+    <tr align="center">
+    <td align="center" valign="top">
+    <img src="img/org committee/3.png" width="80%">
+    </td>
+    </tr>
+    <tr style="font-size:15px;">
+    <td width="33%" valign="top" align="center">
+    <p><span style="font-size:15px; color:#FFF"><strong>Dr. Kinshuk Dasgupta<br>
+    BARC</strong><br>
+    Conference Convener</span></p>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </div>                    
+    
+    
+    
+    
+    <div class="col-lg-3 col-md-12" style="top:-15px !important;">
+                <div class="table-responsive">
+                <table width="100%" border="0">
+    <tr align="center">
+    <td align="center" valign="top">
+    <img src="img/org committee/4.png" width="50%" class="logocontrol">
+    <img src="img/org committee/4.png" width="80%" class="logocontrol2">
+    </td>
+    </tr>
+    <tr style="font-size:15px;">
+    <td width="33%" valign="top" align="center">
+    <p><span style="font-size:15px; color:#FFF"><strong>Dr. Jyoti Prakash<br>
+    BARC</strong><br>
+    Conference Secretary</span></p>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </div> 
+    
+    
+    <div class="col-lg-2 col-md-12" style="top:-15px !important;">
+                <div class="table-responsive">
+                <table width="100%" border="0">
+    <tr align="center">
+    <td align="center" valign="top">
+    <img src="img/org committee/5.png" width="80%">
+    </td>
+    </tr>
+    <tr style="font-size:15px;">
+    <td width="33%" valign="top" align="center">
+    <p><span style="font-size:15px; color:#FFF"><strong>Dr. Manishkumar D Yadav<br>
+    ICT</strong><br>
+    Conference Treasurer</span></p>
+    </td>
+    </tr>
+    </table>
+    </div>
+    </div> 
+    
+    
+    </div>  
+    </div>
+    </div>
+    </div>
+    
+    
+    <!-- org committee End -->
+    <!-- FAQs End -->
+    
+    
+    
+    <!-- Blog Start -->
+    
+    <div class="faqs">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6">
+            
+           
+        
+          <div>
+          
+           <img src="img/DAE-Convention-Centre.jpg"  alt="By Air" width="100%">
+          
+          </div>
+          
+    
+            </div>
+            
+            
+            <div class="col-md-6">
+            
+            <div class="section-header text-center" style="margin-bottom: 5px !important;">
+            
+             <h4 style="font-size:25px !important;">Venue : DAE Convention Centre, Anushaktinagar, Mumbai</h4>
+           <br>
+    
+            <p align="justify" style="color:#000 !important; font-weight:normal; font-size:17px;"> 2WJH+V32, Anushakti Nagar, Mumbai, Maharashtra 400094</p>
+            <br>
+    
+           <p align="justify" style="color:#000 !important; font-weight:normal; font-size:17px;">
+          The venue of ICCM-2023 is a state-of – the-art convention centre facility located in the beautiful residential township of BARC surrounded by lush greenery and picturesque views. DAE Convention Centre has three auditoriums, exhibition halls and ample dining space. The main auditorium has seating capacity of 1000 and each of the two mini auditoriums can accommodate 250 people. All auditoriums are well-furnished, air-conditioned and equipped with all modern amenities. The DAE Convention Centre also has two fully equipped board rooms with a seating capacity of 30 people for conducting small group meetings. <br>
+          <br>
+          
+    
+    DAE Convention Centre has a guest house facility within the venue and two guest houses of BARC nearby the venue which can accommodate a limited number of the conference participants.. <br>
+    <br>
+    </p> 
+           
+        </div>
+    
+    <div class="col-md-12">
+        
+        <div class="about-text" align="left">
+    <a class="btn" href="venue.html" style="background:#03F; color:#FFF;">Read More</a>   
+    </div>
+    
+    </div>                   
+                
+            </div>
+        </div>
+    </div>
+    </div>     
+    
+    <!-- Blog End -->  
+    
+    
+    
+    <!-- Blog Start -->
+    <div class="blog">
+    <div class="container">
+        <div class="section-header text-center">
+           
+            <h3><strong>MUMBAI CITY ATTRACTIONS</strong></h3>
+        </div>
+        <div class="row blog-page">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/tour/1.jpg" alt="Bandra-Worli Sea Link">
+                    </div>
+                    <div class="blog-title">
+                        <h3>Bandra-Worli Sea Link</h3>
+                       <a class="btn" href="img/tour/1.jpg" data-lightbox="service">+</a>
+                    </div>
+                    
+                    <div class="blog-text">
+                        <p>
+                           The Bandra-Worli Sea Link (officially known as Rajiv Gandhi Sea Link[1]) is a 5.6 km long, 8-lane wide bridge that links Bandra in the Western Suburbs of Mumbai with Worli in Central Mumbai.<br><br>
+    
+    <div class="about-text" align="left">
+    <a class="btn" href="mumbai-attraction.html" style="background:#29297a; color:#FFF; width:100%;">Read More</a>   
+    </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/tour/2.jpg" alt="Gateway of India Mumbai">
+                    </div>
+                    <div class="blog-title">
+                        <h3>Gateway of India Mumbai</h3>
+                       <a class="btn" href="img/tour/2.jpg" data-lightbox="service">+</a>
+                    </div>
+                    
+                    <div class="blog-text">
+                        <p>
+                           The Gateway of India is an arch-monument built in the early 20th century in the city of Mumbai, India. It was erected to commemorate the landing of King-Emperor George V, the first British<br>
+    <br>
+    <div class="about-text" align="left">
+    <a class="btn" href="mumbai-attraction.html" style="background:#29297a; color:#FFF; width:100%;">Read More</a>   
+    </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/tour/3.jpg" alt="Chhatrapati Shivaji Maharaj Terminus">
+                    </div>
+                    <div class="blog-title">
+                        <h3>Chhatrapati Shivaji Maharaj Terminus</h3>
+                        <a class="btn" href="img/tour/3.jpg" data-lightbox="service">+</a>
+                    </div>
+                    
+                    <div class="blog-text">
+                        <p>
+                           Chhatrapati Shivaji Maharaj Terminus, is a historic railway terminus and UNESCO World Heritage Site in Mumbai, Maharashtra, India. Its construction began in 1878,<br>
+    <br><br>
+    
+    <div class="about-text" align="left">
+    <a class="btn" href="mumbai-attraction.html" style="background:#29297a; color:#FFF; width:100%;">Read More</a>   
+    </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item">
+                    <div class="blog-img">
+                        <img src="img/tour/4.jpg" alt="Shree Siddhivinayak Temple">
+                    </div>
+                    <div class="blog-title">
+                        <h3>Shree Siddhivinayak Temple</h3>
+                        <a class="btn" href="img/tour/4.jpg" data-lightbox="service">+</a>
+                    </div>
+                    
+                    <div class="blog-text">
+                        <p>
+                          The Shree Siddhivinayak Ganapati Mandir is a Hindu temple dedicated to Lord Shri Ganesh. It is located in Prabhadevi, Mumbai, Maharashtra, India. It was originally built by<br>
+    <br>
+    <div class="about-text" align="left">
+    <a class="btn" href="mumbai-attraction.html" style="background:#29297a; color:#FFF; width:100%;">Read More</a>   
+    </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+           
+           <!--<div class="col-md-12">
+        
+        <div class="about-text" align="left">
+    <a class="btn" href="Agra_General_Information.html" style="background:#1d94f3; color:#FFF; width:100%;">Read More</a>   
+    </div>
+    
+    </div>--> 
+            
+        </div>
+        
+    </div>
+    </div>
+    <!-- Blog End -->
+    
+    
+    
+    <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+    <div id="wowslider-container1">
+    <div class="ws_images"><ul>
+    <li><img src="data1/images/1.jpg" alt="css image gallery" title="1" id="wows1_0"/></li>
+    <li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_1"/></li>
+    <!--<li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_2"/></li>
+    <li><img src="data1/images/4.jpg" alt="3" title="3" id="wows1_2"/></li>
+    <li><img src="data1/images/5.jpg" alt="4" title="4" id="wows1_3"/></li>-->
+    </ul></div>
+    <div class="ws_script" style="position:absolute;left:-99%"><a href="#"></a> </div>
+    <div class="ws_shadow"></div>
+    </div>	
+    <script type="text/javascript" src="engine1/wowslider.js"></script>
+    <script type="text/javascript" src="engine1/script.js"></script>
+    <!-- End WOWSlider.com BODY section -->
+    
+    
+    
+    ';
+    
+    return $homeMsg;
+    }
+
 function About(){
 
     $aboutMsg='<!-- About Start -->
