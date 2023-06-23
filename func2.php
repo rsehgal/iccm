@@ -1517,10 +1517,13 @@ function Upload_Contribution(){
             $body="Dear ".$_SESSION["username"].", 
             
             Your have successfully resubmitted your paper $renamedFileName 
-            You can view your updated paper in View_Contribution link.";
+            You can view your updated paper in View_Contribution link.
+
+	    Regards,
+	    ICCM-2023";
             
             
-                    //SendMail("resubmission",$_SESSION["email"],"NASI 2023 : Contribution Resubmitted",$body);
+                    SendMail("resubmission",$_SESSION["email"],"ICCM 2023 : Contribution Resubmitted",$body);
             
                             return Message("File uploaded successfully with name : $renamedFileName","alert-success");
                         } else {
@@ -1855,10 +1858,13 @@ function Upload_Contribution(){
             $body="Dear ".$_SESSION["username"].", 
             
             Your have successfully submitted your paper $renamedFileName 
-            You can view your paper in View_Contribution link.";
+            You can view your paper in View_Contribution link.
+
+	    Regards,
+	    ICCM-2023";
             
             
-                            //SendMail("submission",$_SESSION["email"],"NASI 2023 : Contribution submitted",$body);
+                            SendMail("submission",$_SESSION["email"],"ICCM 2023 : Contribution submitted",$body);
             
                             $result->free();
                             return Message("File uploaded successfully with name : $renamedFileName","alert-success");
