@@ -1892,4 +1892,42 @@ function Upload_Contribution(){
               }
             
 
+              function LoadForgotPasswordForm(){
+                $forms = new Forms();
+                return $forms->ForgotPassword(); 
+                }
+                
+                //Ajax called
+                function ServeForgotPassword(){
+                $email = $_POST["email"];
+                $obj=new DB();
+                $query = 'select * from user_credentials where email="'.$email.'"';
+                $result = $obj->GetQueryResult($query);
+                if($result===false)
+                                                return Message("Query execution fails","alert-danger");
+                
+                $row=$result->fetch_assoc();
+                $uname=$row["uname"];
+                $passwd=$row["passwd"];
+                $fname=$row["firstname"];
+                $lname=$row["lastname"];
+                $body='Dear '.$fname.' '.$lname.',
+                
+                We have received a request to recover your credentials for NASI-2023.
+                
+                Please find below the required credentials
+                
+                username : '.$uname.'
+                password : '.$passwd.'
+                
+                With Regards,
+                NASI-2023
+                ';
+                
+                //return $body;
+                SendMail("admin",$email,"NASI 2023 : Credentials",$body);
+                $result->free();
+                return Message("Login credentials sent to email : ".$email,"alert-info");
+                }
+                      
         ?>

@@ -160,7 +160,7 @@ class Forms{
 			dataForgot["function_name"]="LoadForgotPasswordForm";
 
 			$.ajax({
-                        url: "../controller/func2.php",
+                        url: "func2.php",
                         method: "POST",
 			data:dataForgot,
 
