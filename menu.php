@@ -80,19 +80,19 @@ function IccmMenu(){
   
                    $menuMsg.='
                        <a href="index.html" class="nav-item nav-link active iccmMenu" id="Home">Home</a>
-                        <a href="about-organizer.html" class="nav-item nav-link iccmMenu" id="About">About the Organisers</a>
-                        <a href="committee.html" class="nav-item nav-link iccmMenu" id="Committee">Committee</a>
-                        <a href="registration.html" class="nav-item nav-link iccmMenu" id="Signup">Signup</a>
-                        <a href="registration.html" class="nav-item nav-link iccmMenu" id="Login">Login</a>
-                        <a href="registration.html" class="nav-item nav-link iccmMenu" id="Registration">Registration</a>
-                        <a href="programme.html" class="nav-item nav-link iccmMenu" id="Programme">Programme</a>
-                        <a href="abstract.html" class="nav-item nav-link iccmMenu" id="Abst">Abstract</a>
-                        <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers">Speakers</a>
-                        <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue">Venue</a>
-                        <a href="accommodation.html" class="nav-item nav-link iccmMenu" id="Accommodation">Accommodation</a>
-                        <a href="sponsors.html" class="nav-item nav-link iccmMenu" id="Sponsor">Sponsor</a>
+                        <a href="about-organizer.html" class="nav-item nav-link iccmMenu" id="About" value="About the Organisers">About the Organisers</a>
+                        <a href="committee.html" class="nav-item nav-link iccmMenu" id="Committee" value="Committee">Committee</a>
+                        <a href="registration.html" class="nav-item nav-link iccmMenu" id="Signup" value="Signup">Signup</a>
+                        <a href="registration.html" class="nav-item nav-link iccmMenu" id="Login" value="Login">Login</a>
+                        <a href="registration.html" class="nav-item nav-link iccmMenu" id="Registration" value="Registration">Registration</a>
+                        <a href="programme.html" class="nav-item nav-link iccmMenu" id="Programme" value="Programme">Programme</a>
+                        <a href="abstract.html" class="nav-item nav-link iccmMenu" id="Abst" value="Abstract">Abstract</a>
+                        <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers" value="Speakers">Speakers</a>
+                        <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue" value="Venue">Venue</a>
+                        <a href="accommodation.html" class="nav-item nav-link iccmMenu" id="Accommodation" value="Accommodation">Accommodation</a>
+                        <a href="sponsors.html" class="nav-item nav-link iccmMenu" id="Sponsor" value="Sponsor">Sponsor</a>
                          <div class="nav-item dropdown">
-                       <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Awards</a>
+                       <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" value="Awards">Awards</a>
                          <div class="dropdown-menu">
                               <a href="pdf/Best PhD Thesis Award.doc" target="_blank" class="dropdown-item"> Best PhD Thesis Award</a>
                                 <a href="pdf/Best Innovation Award.doc" target="_blank" class="dropdown-item"> Best Innovation Award</a>
@@ -101,7 +101,7 @@ function IccmMenu(){
                      </div>
 
                        <div class="nav-item dropdown">
-                          <a href="#" class="nav-link dropdown-toggle iccmMenu" data-toggle="dropdown">Downloads</a>
+                          <a href="#" class="nav-link dropdown-toggle iccmMenu" data-toggle="dropdown" value="Downloads">Downloads</a>
                             <div class="dropdown-menu">
                                 <a href="pdf/Brochure ICCM 2023.pdf" target="_blank" class="dropdown-item"> Conference Brochure</a>
                                 <a href="#" target="_blank" class="dropdown-item"> Registration Form</a>

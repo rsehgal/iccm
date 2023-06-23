@@ -1,5 +1,37 @@
 <?php
 //echo "Hello Friend...";
+function IccmHeader($headerType=""){
+
+    $headerMsg="";
+    $headerType=$_POST["value"];
+    if($headerType==""){
+        
+    }else{
+    $headerMsg='<div class="page-header" style="margin-bottom: 0px !important;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 style="color:#FFF; font-weight:600;">'.strtoupper($headerType).'</h3>
+                        </div>
+                        <div class="col-12">
+                            <a href="#" id="iccmHomeLink">Home</a>
+                            <a href="">'.$headerType.'</a>
+                        </div>
+                    </div>
+                </div>
+            </div>';
+        
+    }
+
+    $associatedJs ="<script>
+                    $('#iccmHomeLink').click(function(){
+
+                        $('#Home').trigger('click');
+                    });
+                    </script>";
+    return $headerMsg.$associatedJs;
+}
+
 function IccmFooter(){
 
     $footerMsg='<!-- Footer Start -->

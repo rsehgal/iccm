@@ -145,6 +145,30 @@ var dataUp=new FormData();
 		$("#myModal").modal('show');
 	
 
+  $('.iccmMenu').on('click',function(event){
+	//alert($(this).attr("id")+" called..");
+	event.preventDefault();
+	var funcName="";
+	var data={};
+	var funcName="IccmHeader";
+	//alert(funcName);
+	data['function_name']=funcName;
+  data['value']=$(this).attr("value");
+  //alert(data['value']);
+	console.log(data);
+	$.ajax({
+	    url: "func2.php",
+	    method: "POST",
+	    data : data,
+	    success: function(response) {
+	   // $("#result").hide();
+      //$("#iccmheader").hide();
+	    $("#iccmheader").html(response);
+	    //$("#iccmheader").fadeIn(1000);
+	    }
+	  });
+
+});
 
 
 $('.iccmMenu').on('click',function(event){
@@ -187,7 +211,7 @@ $("#Home").trigger("click");
 
     <body>
 
-        
+    
         <div class="wrapper">
             <!-- Top Bar Start -->
             
@@ -205,19 +229,11 @@ $("#Home").trigger("click");
 
 
 <!-- Page Header Start -->
-            <div class="page-header" style="margin-bottom: 0px !important;">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h3 style="color:#FFF; font-weight:600;">PROGRAMME</h3>
-                        </div>
-                        <div class="col-12">
-                            <a href="index.html">Home</a>
-                            <a href="">Programme</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id='iccmheader' class='' ></div>
+<?php
+                require_once "helpers.php";
+                echo IccmHeader();
+            ?>
             <!-- Page Header End -->
 
 
