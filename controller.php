@@ -1792,7 +1792,8 @@ function Upload_Contribution(){
             
             
                 //$query = "insert into iccm_user_credentials values('$username','$password','$firstname','$lastname','$email',NOW())";
-                $query = "insert into iccm_user_credentials values('$username','$password','$firstname','$lastname','$email',NOW(),'$institute','$institute_add','$contactno','$institute_type','$designation','$qualification')";
+                $query = "insert into iccm_user_credentials values('$firstname','$lastname',
+'$email','$contactno','$qualification','$designation','$institute','$institute_add','$institute_type','$username','$password',NOW())";
                 $obj->GetQueryResult($query);
                 $body="Dear $firstname $lastname, 
             
