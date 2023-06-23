@@ -416,11 +416,11 @@ public function Register($fieldNames){
 					while($row = $result->fetch_assoc())
 					{
 						$option = $row["Code"]." : ".$row["Topic"];
-						$selected = ($option == $selectedOption) ? 'selected' : '';
-						if($counter==0)
+						//$selected = ($option == $selectedOption) ? 'selected' : '';
+						//if($counter==0)
 						$selAccReq.='<option value="' . $option . '" myid="'.$row["Code"].'">' . $option . '</option>';
-						else
-						$selAccReq.='<option value="' . $option . '" myid="'.$row["Code"].'"' . $selected . '>' . $option . '</option>';
+						//else
+						//$selAccReq.='<option value="' . $option . '" myid="'.$row["Code"].'"' . $selected . '>' . $option . '</option>';
 					}
 					$selAccReq.='</select></div>';	
 					$formContent.=$selAccReq;
