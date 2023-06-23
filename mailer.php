@@ -10,7 +10,7 @@ require_once "Mail.php";
 
 
 $host = "mail.carbonindia-iccm.com";
-$username = $user."@carbonindia-iccm.cm";//"admin@nasi2023.in";
+$username = $user."@carbonindia-iccm.com";//"admin@nasi2023.in";
 $from=strtoupper($user)." <".$user."@carbonindia-iccm.com>";
 $password = "nasi123by!#*";
 
