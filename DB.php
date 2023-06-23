@@ -16,9 +16,9 @@ private $conn;
 function __construct() {
   //echo "Constructor called...........<br/>";
   $this->sname='localhost';//$DBADDRESS;
-  $this->uname='sympadmin';
+  $this->uname='carbonindiaiccm_sympadmin';
   $this->passwd='sympadmin@123';//$DBPASSWD;
-  $this->dbname='symposia'; 
+  $this->dbname='carbonindiaiccm_symposia'; 
   //$this->Connect();  
 }
 

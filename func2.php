@@ -4,7 +4,7 @@ require_once "helpers.php";
 require_once "Forms.php";
 require_once "DB.php";
 require_once "helpers2.php";
-
+require_once "mailer.php";
 function Home(){
     $homeMsg='<div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-main.jpg); background-attachment:fixed; padding-top:50px; padding-bottom:50px;">
     <div class="container">
@@ -1791,7 +1791,7 @@ function Upload_Contribution(){
             
             Your can use these credentials to do the registration and to upload your paper.";
                 //SendMail($from,$to,$subject,$body);
-                // SendMail("newaccount",$email,"NASI 2023 : Account Created",$body);	
+                SendMail("newaccount",$email,"ICCM 2023 : Account Created",$body);	
                 //echo "$username : $password : $firstname : $lastname : $email";	
                        //return "<div>ServeSignup function called..........</div><br/>".$_POST['firstname'];
                 return Message("User account creation successful.","alert-success");
