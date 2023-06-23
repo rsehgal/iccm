@@ -1523,7 +1523,8 @@ function Upload_Contribution(){
 	    ICCM-2023";
             
             
-                    SendMail("resubmission",$_SESSION["email"],"ICCM 2023 : Contribution Resubmitted",$body);
+                    SendMail("admin",$_SESSION["email"],"ICCM 2023 : Contribution Resubmitted",$body);
+                    //SendMail("resubmission",$_SESSION["email"],"ICCM 2023 : Contribution Resubmitted",$body);
             
                             return Message("File uploaded successfully with name : $renamedFileName","alert-success");
                         } else {
