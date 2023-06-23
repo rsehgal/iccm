@@ -1022,7 +1022,7 @@ function ServeLogin(){
 
         $tableToQuery="";
 	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Author")	
-		$tableToQuery = "user_credentials";
+		$tableToQuery = "iccm_user_credentials";
 	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Referee")	
 		$tableToQuery = "refereeList";
 	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Admin")	
@@ -1772,20 +1772,27 @@ function Upload_Contribution(){
                  $firstname = $_POST['firstname'];
                 $lastname = $_POST['lastname'];
                 $email=$_POST['email'];
+                $contactno=$_POST['contactno'];
+                $qualification=$_POST['qualification'];
+                $designation=$_POST['designation'];
+                $institute=$_POST['institute'];
+                $institute_add=$_POST['institute_add'];
+                $institute_type=$_POST['institute_type'];
                 $username=$_POST['username'];
                 $password=$_POST['password'];
-                $query='select uname from user_credentials where uname="'.$username.'"';
+                $query='select uname from iccm_user_credentials where uname="'.$username.'"';
                 //$fetchedUname=GetQueryResult($query)->fetch_assoc()["uname"];
                 //echo "Fetch uname : ".$fetchedUname."<br/>";
                 if(GetQueryResult($query)->fetch_assoc()["uname"] == $username)
                     return Message("Username : $username already exist.","alert-danger");
                 
-                $query='select email from user_credentials where email="'.$email.'"';
+                $query='select email from iccm_user_credentials where email="'.$email.'"';
                 if(GetQueryResult($query)->fetch_assoc()["email"] == $email)
                     return Message("Email : $email already registered.","alert-danger");
             
             
-                $query = "insert into user_credentials values('$username','$password','$firstname','$lastname','$email',NOW())";
+                //$query = "insert into iccm_user_credentials values('$username','$password','$firstname','$lastname','$email',NOW())";
+                $query = "insert into iccm_user_credentials values('$username','$password','$firstname','$lastname','$email',NOW(),'$institute','$institute_add','$contactno','$institute_type','$designation','$qualification')";
                 $obj->GetQueryResult($query);
                 $body="Dear $firstname $lastname, 
             
@@ -1909,7 +1916,7 @@ function Upload_Contribution(){
                 function ServeForgotPassword(){
                 $email = $_POST["email"];
                 $obj=new DB();
-                $query = 'select * from user_credentials where email="'.$email.'"';
+                $query = 'select * from iccm_user_credentials where email="'.$email.'"';
                 $result = $obj->GetQueryResult($query);
                 if($result===false)
                                                 return Message("Query execution fails","alert-danger");

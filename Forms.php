@@ -12,25 +12,57 @@ class Forms{
 	return '<br/><div class="container">
 		<h2>User Account Creation Form</h2>
 		      <form method="POST" id="signup" class="symposiaForms">
-			<div class="form-group">
+						<div class="form-group">
                                 <label for="firstname">First Name:</label>
                                 <input type="text" class="form-control signupForm" id="firstname" name="firstname" required>
                         </div>
-			<div class="form-group">
+						<div class="form-group">
                                 <label for="lastname">Last Name:</label>
                                 <input type="text" class="form-control signupForm" id="lastname" name="lastname" required>
                         </div>
 
-			<div class="form-group">
+						<div class="form-group">
                                 <label for="email">Email:</label>
                                 <input type="email" class="form-control signupForm" id="email" name="email" required>
                         </div>
+
+						<div class="form-group">
+                                <label for="contactno">Contact No.:</label>
+                                <input type="text" class="form-control signupForm" id="contactno" name="contactno" required>
+                        </div>
+
+						<div class="form-group">
+                                <label for="qualification">Qualification:</label>
+                                <input type="text" class="form-control signupForm" id="qualification" name="qualification" placeholder="B.Tech / M. Sc. / Ph. D." required>
+                        </div>
+
+						<div class="form-group">
+                                <label for="designation">Designation:</label>
+                                <input type="text" class="form-control signupForm" id="designation" name="designation" required>
+                        </div>
+
+						<div class="form-group">
+                                <label for="institute">Institute Name:</label>
+                                <input type="text" class="form-control signupForm" id="institute" name="institute" required>
+                        </div>
+
+						<div class="form-group">
+                                <label for="institute_add">Institute Address:</label>
+                                <input type="text" class="form-control signupForm" id="institute_add" name="institute_add" required>
+                        </div>
+
+						<div class="form-group">
+                                <label for="institute_type">Institute Type:</label>
+                                <input type="text" class="form-control signupForm" id="institute_type" name="institute_type" placeholder="Industry/Academia" required>
+                        </div>
+
+						
 
                         <div class="form-group">
                                 <label for="username">Username:</label>
                                 <input type="text" class="form-control signupForm" id="username" name="username" required>
                         </div>
-                                               <div class="form-group">
+                        <div class="form-group">
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control signupForm" id="password" name="password" required>
                         </div>

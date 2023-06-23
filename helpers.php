@@ -161,7 +161,7 @@ function IccmCarousel(){
 function GetSubmitterName(){
 	session_start();
 	$obj = new DB();
-	$query='select firstname,lastname from user_credentials where uname="'.$_SESSION["username"].'"';
+	$query='select firstname,lastname from iccm_user_credentials where uname="'.$_SESSION["username"].'"';
 	$result = $obj->GetQueryResult($query);
 	if($result===false)
                                 return Message("Query execution fails","alert-danger");
