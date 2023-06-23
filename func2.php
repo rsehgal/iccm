@@ -1913,7 +1913,7 @@ function Upload_Contribution(){
                 $lname=$row["lastname"];
                 $body='Dear '.$fname.' '.$lname.',
                 
-                We have received a request to recover your credentials for NASI-2023.
+                We have received a request to recover your credentials for ICCm-2023.
                 
                 Please find below the required credentials
                 
@@ -1921,11 +1921,11 @@ function Upload_Contribution(){
                 password : '.$passwd.'
                 
                 With Regards,
-                NASI-2023
+                ICCM-2023
                 ';
                 
                 //return $body;
-                SendMail("admin",$email,"NASI 2023 : Credentials",$body);
+                SendMail("admin",$email,"ICCM 2023 : Credentials",$body);
                 $result->free();
                 return Message("Login credentials sent to email : ".$email,"alert-info");
                 }
