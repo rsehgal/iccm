@@ -1945,5 +1945,50 @@ function Upload_Contribution(){
                 $result->free();
                 return Message("Login credentials sent to email : ".$email,"alert-info");
                 }
-                      
+        
+	function PaymentForm(){
+		session_start();
+		if(isset($_SESSION["loggedin"])){
+			$forms = new Forms();
+                	return $forms->PaymentForm();		
+        	}
+	        else{
+        	    return Message("Please login to fill the payment details.");
+        	}
+	}
+
+        /*function GetCounter($tablename){
+		session_start();
+		$obj = new DB();
+		$query="select count(*) as counter from $tablename where uname='".$_SESSION[]."'";
+		$result=$obj->GetQueryResult($query);
+		$row=$result->fetch_assoc();
+		$counter=$row["counter"];
+		return $counter;
+
+	}*/
+
+	function ServePayment(){
+
+
+		$counter=0;//GetCounter("iccm_payment_detail");
+		if($counter==0){
+		$obj = new DB();
+		$query = "insert into iccm_payment_detail values
+				('$_POST[username]',
+				 '$_POST[name]', 
+				 '$_POST[bankname]', 
+				 '$_POST[dateoftrans]', 
+				 '$_POST[refnum]', 
+				 $_POST[amount] 
+				)";
+		$result = $obj->GetQueryResult($query);
+		if($result)
+		return Message("Payment details registered successfully","alert-success");
+		else
+		return Message("Failed to register your payment details","alert-danger");
+		}else{
+		return Message("You had already filled the payment details","alert-info");
+		}
+	}              
         ?>

@@ -26,6 +26,7 @@ function Menu(){
 	    AddMenuEntry("Committee").
 	    AddMenuEntry("Registration");
 
+	$menuMsg.= AddMenuEntry("Payment");
 	$menuMsg.= AddMenuEntry("Programme");
 	$menuMsg.= AddMenuEntry("Abstract");
 	$menuMsg.= AddMenuEntry("Speakers");
@@ -85,6 +86,7 @@ function IccmMenu(){
                         <a href="registration.html" class="nav-item nav-link iccmMenu" id="Signup" value="Signup">Signup</a>
                         <a href="registration.html" class="nav-item nav-link iccmMenu" id="Login" value="Login">Login</a>
                         <a href="registration.html" class="nav-item nav-link iccmMenu" id="Registration" value="Registration">Registration</a>
+                        <a href="#" class="nav-item nav-link iccmMenu" id="PaymentForm" value="Payment">Payment</a>
                         <a href="programme.html" class="nav-item nav-link iccmMenu" id="Programme" value="Programme">Programme</a>
                         <a href="abstract.html" class="nav-item nav-link iccmMenu" id="Abst" value="Abstract">Abstract</a>
                         <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers" value="Speakers">Speakers</a>
