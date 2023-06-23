@@ -90,7 +90,7 @@ class Forms{
 					data["function_name"]="ServeForgotPassword";
 					data["email"]=$("#emailResetForm").val();
 					$.ajax({
-						    url: "../controller/func2.php",
+						    url: "func2.php",
 						    method: "POST",
 						    data : data,
 						    success: function(response) {
