@@ -157,7 +157,7 @@ var dataUp=new FormData();
   //alert(data['value']);
 	console.log(data);
 	$.ajax({
-	    url: "func2.php",
+	    url: "controller.php",
 	    method: "POST",
 	    data : data,
 	    success: function(response) {
@@ -181,7 +181,7 @@ $('.iccmMenu').on('click',function(event){
 	data['function_name']=funcName;
 	console.log(data);
 	$.ajax({
-	    url: "func2.php",
+	    url: "controller.php",
 	    method: "POST",
 	    data : data,
 	    success: function(response) {

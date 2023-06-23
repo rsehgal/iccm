@@ -1063,7 +1063,7 @@ function ServeLogin(){
 				e.preventDefault();
 				data["function_name"]="Logout";
 				$.ajax({
-				    url: "../controller/func2.php",
+				    url: "../controller/controller.php",
 				    method: "POST",
 				    data : data,
 				    success: function(response) {
@@ -1261,7 +1261,7 @@ function Upload_Contribution(){
                         okornot = confirm("Are you sure you want to withdraw the paper.");
                     if(okornot){
                     $.ajax({
-                        url: "func2.php",
+                        url: "controller.php",
                         method: "POST",
                         data : data,
                         success: function(response) {
@@ -1449,7 +1449,7 @@ function Upload_Contribution(){
           
                 
                 $.ajax({
-                        url: "func2.php",
+                        url: "controller.php",
                         method: "POST",
                         data : dataUp,
                         processData : false,
@@ -1646,7 +1646,7 @@ function Upload_Contribution(){
                 data['function_name']=funcName;
                 console.log(data);
                 $.ajax({
-                    url: 'func2.php',
+                    url: 'controller.php',
                     method: 'POST',
                     data : data,
                     success: function(response) {

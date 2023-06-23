@@ -53,7 +53,7 @@ class Forms{
 
 
 			$.ajax({
-			    url: "func2.php",
+			    url: "controller.php",
 			    method: "POST",
 			    data : data,
 			    success: function(response) {
@@ -90,7 +90,7 @@ class Forms{
 					data["function_name"]="ServeForgotPassword";
 					data["email"]=$("#emailResetForm").val();
 					$.ajax({
-						    url: "func2.php",
+						    url: "controller.php",
 						    method: "POST",
 						    data : data,
 						    success: function(response) {
@@ -140,7 +140,7 @@ class Forms{
 		console.log(data);
 		
 		$.ajax({
-                        url: "func2.php",
+                        url: "controller.php",
                         method: "POST",
                         data : data,
                         success: function(response) {
@@ -160,7 +160,7 @@ class Forms{
 			dataForgot["function_name"]="LoadForgotPasswordForm";
 
 			$.ajax({
-                        url: "func2.php",
+                        url: "controller.php",
                         method: "POST",
 			data:dataForgot,
 
@@ -366,7 +366,7 @@ public function Register($fieldNames){
 							});
 
 							$.ajax({
-								url: "../controller/func2.php",
+								url: "../controller/controller.php",
 								method: "POST",
 								data : data,
 								success: function(response) {
@@ -544,7 +544,7 @@ public function Register($fieldNames){
 			    console.log(dataUp);
 
 			$.ajax({
-				url: "func2.php",
+				url: "controller.php",
 				method: "POST",
 				data : dataUp,
 				processData : false,
