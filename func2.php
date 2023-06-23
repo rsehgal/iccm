@@ -1546,8 +1546,8 @@ function Upload_Contribution(){
         }
 
         function Abst(){
-            ini_set('display_errors', 1);
-            ini_set('display_startup_errors', 1);
+            //ini_set('display_errors', 1);
+            //ini_set('display_startup_errors', 1);
             //error_reporting(E_ALL);
             
                 $abstractMsg='<div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-main.jpg); background-attachment:fixed; padding-top:50px; padding-bottom:50px;">
