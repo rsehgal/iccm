@@ -529,10 +529,10 @@ public function Register($fieldNames){
 
 			//	alert("This should not Pop up.");
 			dataUp.append("function_name","IccmUpload");
-			alert($("#Title").val());
+			//alert($("#Title").val());
 			dataUp.append("title",$("#Title").val());
 
-			alert("Submit clicked...");
+			//alert("Submit clicked...");
 			var authorNameTextBoxValues = $(".authorname").map(function() {
 				return $(this).val();
 				}).get();

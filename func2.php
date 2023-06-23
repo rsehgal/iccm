@@ -1432,11 +1432,11 @@ function Upload_Contribution(){
           
                   //	alert("This should not Pop up.");
                   dataUp.append("function_name","IccmResubmitUpload");
-                  alert($("#Title").val());
+                  //alert($("#Title").val());
                   dataUp.append("title",$("#Title").val());
                   dataUp.append("filename",$(this).attr("filename"));
           
-                  alert("Submit clicked...");
+                  //alert("Submit clicked...");
                   var authorNameTextBoxValues = $(".authorname").map(function() {
                         return $(this).val();
                         }).get();
