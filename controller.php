@@ -1081,11 +1081,17 @@ function ServeLogin(){
 						//alert('Admin or Coorinator loggged in...');
 					//if($('#hiddenInfo').attr('logintype')=='Admin' &&
 					if( $('#hiddenInfo').attr('loggedin')=='1'){
+						//alert('Enabling your tasks...');
 					//$('#YourTasks').show();
-					$('#YourTasks').removeClass('text-light');
-                			$('#YourTasks').addClass('text-warning');
-			                $('#YourTasks').addClass('text-bold');
+					//$('#YourTasks').removeClass('text-light');
+                			//$('#YourTasks').addClass('text-light');
+			                //$('#YourTasks').addClass('text-bold');
 			                $('#YourTasks').show();
+					$('#Home').trigger('click');
+
+					$('#YourTasks').click(function(){
+						//alert('Your Tasks clickedd....');
+					});
 
 				}
 
@@ -1101,11 +1107,13 @@ function ServeLogin(){
         $_SESSION["uploadlocation"]="Uploads";
 		$result->free();
 		//if($_SESSION["logintype"]=="Admin" && $_SESSION["loggedin"])
-		if($_SESSION["loggedin"])
-		echo '<input type="hidden" id="hiddenInfo" logintype="'.$_SESSION["logintype"].'" loggedin="'.$_SESSION["loggedin"].'" />';
+		
+		//if($_SESSION["loggedin"])
+		//echo '<input type="hidden" id="hiddenInfo" logintype="'.$_SESSION["logintype"].'" loggedin="'.$_SESSION["loggedin"].'" />';
+
 		if($_SESSION["logintype"]=="Author")
 		//return "<div><h3 class='alert alert-success' role='alert'> Welcome ".$_SESSION["logintype"]." : ".$uname."</h3><br/>";
-		return '<h4><mark >Logged in as : '.$_SESSION["username"].'</mark> <input type="button" class="btn btn-custom btn-danger" id="logout" value="Logout"/></h4>'.$js ;
+		return '<h4><mark >Logged in as : '.$_SESSION["username"].'</mark> <input type="button" class="btn btn-custom btn-danger" id="logout" value="Logout"/></h4>'.$js.$adCordJS ;
 
 		if($_SESSION["logintype"]=="Referee"){
 

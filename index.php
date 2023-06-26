@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+
+session_start();
+?>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -143,7 +148,13 @@ var dataUp=new FormData();
 <script>
 	$(document).ready(function(){
 		$("#myModal").modal('show');
-	
+
+//alert("Hiding YourTask...");
+$("#YourTasks").hide();	
+//alert($("#hiddenInfo").attr("loggedin"));
+if( $('#hiddenInfo').attr('loggedin')=='1'){
+$("#YourTasks").show();	
+}
 
   $('.iccmMenu').on('click',function(event){
 	//alert($(this).attr("id")+" called..");
@@ -230,6 +241,24 @@ $("#Home").trigger("click");
 
 <!-- Page Header Start -->
 <div id='iccmheader' class='' ></div>
+<?php
+echo "<div class='text-center bg-dark text-light font-weight-bold'>
+<div id='YourTasks' class='' ><b>YourTasks</b></div>
+</div>";
+
+//echo "Sehgal : ".$_SESSION["loggedin"]."<br/>";
+if(isset($_SESSION["loggedin"])){
+echo '<input type="hidden" id="hiddenInfo" logintype="'.$_SESSION["logintype"].'" loggedin="'.$_SESSION["loggedin"].'" />';
+}
+echo "<script>
+	$(function(){
+
+	//alert('Raman Sehgal'); 
+	});
+
+	</script>";
+?>
+
 <?php
                 require_once "helpers.php";
                 echo IccmHeader();
