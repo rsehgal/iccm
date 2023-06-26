@@ -1022,35 +1022,12 @@ function ServeLogin(){
 	$passwd=$_POST["password"];
 
         $tableToQuery="iccm_user_credentials";
-	/*if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Author")	
-		$tableToQuery = "iccm_user_credentials";
-	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Referee")	
-		$tableToQuery = "refereeList";
-	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Admin")	
-		$tableToQuery = "admin_credentials";
-	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Coordinator")	
-		$tableToQuery = "coordinatorList";*/
-
-	$query = "select * from ".$tableToQuery." where uname='".$uname."'";
-	//return $query;
-	//return $uname;
-	//return "Hello..";
+		$query = "select * from ".$tableToQuery." where uname='".$uname."'";
 	$result = $obj->GetQueryResult($query);
-	//if($result===false)
 	if(!$result)
             return Message("Query execution fails","alert-danger");	
 	$row = $result->fetch_assoc();
-	//return "Hello Raman";
-	//return $row["passwd"]." : ".$passwd;
-
-	/*$js='<script>
-                        var data={};
-                        $("#logout").on("click","function(e){
-                                e.preventDefault();
-				alert("logout");
-			});
-		 </script>';*/
-	$js='<script>
+		$js='<script>
 			/*//alert("Raw loaded............");
 			$(function(){
 			//	alert("JS loaded...");
@@ -1126,7 +1103,6 @@ function ServeLogin(){
 				</script>";
 
 	if($row["passwd"]==$passwd){
-		//return "Password matched...";
 		$_SESSION["loggedin"]=TRUE;
 		$_SESSION["username"]=$uname;
 		if($uname=="admin")
