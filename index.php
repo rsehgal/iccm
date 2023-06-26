@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <?php
 
 session_start();
@@ -8,6 +7,7 @@ session_start();
 //error_reporting(E_ALL);
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
