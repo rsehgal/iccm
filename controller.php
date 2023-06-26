@@ -5,6 +5,7 @@ require_once "Forms.php";
 require_once "DB.php";
 require_once "helpers2.php";
 require_once "mailer.php";
+require_once "yourtasks.php";
 function Home(){
     $homeMsg='<div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-main.jpg); background-attachment:fixed; padding-top:50px; padding-bottom:50px;">
     <div class="container">
@@ -1020,21 +1021,23 @@ function ServeLogin(){
 	$uname=$_POST["username"];
 	$passwd=$_POST["password"];
 
-        $tableToQuery="";
-	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Author")	
+        $tableToQuery="iccm_user_credentials";
+	/*if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Author")	
 		$tableToQuery = "iccm_user_credentials";
 	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Referee")	
 		$tableToQuery = "refereeList";
 	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Admin")	
 		$tableToQuery = "admin_credentials";
 	if(isset($_SESSION["logintype"]) && $_SESSION["logintype"]=="Coordinator")	
-		$tableToQuery = "coordinatorList";
+		$tableToQuery = "coordinatorList";*/
 
 	$query = "select * from ".$tableToQuery." where uname='".$uname."'";
 	//return $query;
 	//return $uname;
+	//return "Hello..";
 	$result = $obj->GetQueryResult($query);
-	if($result===false)
+	//if($result===false)
+	if(!$result)
             return Message("Query execution fails","alert-danger");	
 	$row = $result->fetch_assoc();
 	//return "Hello Raman";
@@ -1063,7 +1066,7 @@ function ServeLogin(){
 				e.preventDefault();
 				data["function_name"]="Logout";
 				$.ajax({
-				    url: "../controller/controller.php",
+				    url: "controller.php",
 				    method: "POST",
 				    data : data,
 				    success: function(response) {
@@ -1093,46 +1096,51 @@ function ServeLogin(){
 						//alert('Your Tasks clickedd....');
 					});
 
+					$('.iccmMenu').on('click',function(event){
+        alert($(this).attr('id')+' called..');
+        event.preventDefault();
+        var funcName='';
+        var data={};
+        var funcName=$(this).attr('id');
+        //alert(funcName);
+        data['function_name']=funcName;
+        console.log(data);
+        $.ajax({
+            url: 'controller.php',
+            method: 'POST',
+            data : data,
+            success: function(response) {
+            $('#result').hide();
+            //$('#result').delay(1000).fadeIn();
+            $('#result').html(response);
+            $('#result').fadeIn(1000);
+            }
+          });
+
+});
+
+
 				}
 
 					});
 				</script>";
 
 	if($row["passwd"]==$passwd){
+		//return "Password matched...";
 		$_SESSION["loggedin"]=TRUE;
 		$_SESSION["username"]=$uname;
+		if($uname=="admin")
+			$_SESSION["logintype"]="Admin";
+		else
+			$_SESSION["logintype"]="Author";
+		//return "Login type : ".$_SESSION["logintype"];
 		$_SESSION["FirstName"]=$row["firstname"];
 		$_SESSION["LastName"]=$row["lastname"];
 		$_SESSION["Email"]=$row["email"];
         $_SESSION["uploadlocation"]="Uploads";
-		$result->free();
-		//if($_SESSION["logintype"]=="Admin" && $_SESSION["loggedin"])
-		
-		//if($_SESSION["loggedin"])
-		//echo '<input type="hidden" id="hiddenInfo" logintype="'.$_SESSION["logintype"].'" loggedin="'.$_SESSION["loggedin"].'" />';
+	//	$result->free();
 
-		if($_SESSION["logintype"]=="Author")
-		//return "<div><h3 class='alert alert-success' role='alert'> Welcome ".$_SESSION["logintype"]." : ".$uname."</h3><br/>";
-		return '<h4><mark >Logged in as : '.$_SESSION["username"].'</mark> <input type="button" class="btn btn-custom btn-danger" id="logout" value="Logout"/></h4>'.$js.$adCordJS ;
-
-		if($_SESSION["logintype"]=="Referee"){
-
-		$loginStatusMsg='<h4><mark >Logged in as : '.$_SESSION["username"].'</mark> <input type="button" class="btn btn-custom btn-danger" id="logout" value="Logout"/></h4>';
-		$localJs = '<script>
-				$(function(){
-
-				$("#loginstatus").html("<h4><mark>Logged in as : '.
-				$_SESSION["username"].'");
-				});</script>';
-				//'</mark><input type="button" class="btn btn-custom btn-danger" id="logout" value="Logout"/> </h4>")});</script>';	
-				//$("#loginstatus").html('.$loginStatusMsg.')});
-		return $localJs.$js." <div><h3 class='alert alert-success' role='alert'> Welcome ".$_SESSION["logintype"]." : ".$uname."</h3><br/>".$loginStatusMsg.'<br/>'.Referee_UpdatePaperStatus().$adCordJS;
-		}
-		if($_SESSION["logintype"]=="Admin"|| $_SESSION["logintype"]=="Coordinator"){
-				return "<div><h3 class='alert alert-success' role='alert'> Welcome ".$_SESSION["logintype"]." : ".$uname."</h3><br/>".PopulateAllotment().$adCordJS;
-		}
-
-		//return "<div><h3 class='text-success'> Welcome User : ".$uname."</h3><br/>";
+	  	return YourTasks();	
 	}
 	else
 		return "<div><h3 class='alert alert-danger text-center' role='alert'> Authenication failure : Please check your credentials.</h3> <br/>";
@@ -1144,7 +1152,7 @@ function Login($loginType="Author"){
     //return Message("Will be available soon","alert-warning");
     //return "Hello";
     session_start();
-    $_SESSION["logintype"]=$loginType;
+    //$_SESSION["logintype"]=$loginType;
     $forms = new Forms();
       return $forms->Login($loginType);
     }
@@ -1998,5 +2006,15 @@ function Upload_Contribution(){
 		}else{
 		return Message("You had already filled the payment details","alert-info");
 		}
-	}              
+	}
+
+/*        function YourTasks(){
+		session_start();
+		if($_SESSION["logintype"]=="Author")
+      
+		return Message("Returning from Author Tasks","alert-success");
+		else
+		return Message("Returning from Admin Tasks","alert-danger");
+
+}*/
         ?>

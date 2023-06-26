@@ -2,6 +2,10 @@
 <?php
 
 session_start();
+
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 ?>
 
 <html lang="en">
@@ -243,7 +247,7 @@ $("#Home").trigger("click");
 <div id='iccmheader' class='' ></div>
 <?php
 echo "<div class='text-center bg-dark text-light font-weight-bold'>
-<div id='YourTasks' class='' ><b>YourTasks</b></div>
+<div id='YourTasks' class='iccmMenu' ><b>YourTasks</b></div>
 </div>";
 
 //echo "Sehgal : ".$_SESSION["loggedin"]."<br/>";

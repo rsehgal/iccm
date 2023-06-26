@@ -209,7 +209,7 @@ public function PaymentForm(){
 
 	public function Login($loginType){
 	return '<br/><div class="container">
-                <h2>'.$loginType.' Login Form</h2>
+                <h2> Login Form</h2>
                 <form method="POST" id="login" class="symposiaForms">
                         <div class="form-group">
                                 <label for="username">Username:</label>
