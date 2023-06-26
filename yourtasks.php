@@ -114,6 +114,7 @@ return Message("Please login first","alert-danger");
 function ShowRegistration(){
 //return Message("Helllo","alert-success");
 session_start();
+if(isset($_SESSION["loggedin"])){
 $obj = new DB();
 $queryReg = "select * from iccm_user_credentials";
 $resultReg = $obj->GetQueryResult($queryReg);
@@ -161,6 +162,9 @@ $tabMsg.= "</tr>";
 $tabMsg.="</table>";
 //$result->free();
 return $tabMsg;
+}else{
+return Message("Please login","alert-danger");
+}
 }
 
 
