@@ -226,6 +226,19 @@ function Home(){
     </td>
     </tr>
     
+     <tr class="text-center">
+     <td><a href="#"  class="blink-soft font-weight-bold" >Steps for ICCM registration </a></td>
+     </tr> 
+     <tr class="text-center">
+     <td><a href="#" class="blink-hard font-weight-bold" >Steps for Abstract submission </a></td>
+     </tr> 
+
+    <tr style="font-size:16px; color:#FFF;">
+    <td width="50%" align="center" valign="top" bgcolor="#16679E">
+    
+    </td>
+    </tr>
+    
     
     </table>
     
