@@ -1965,18 +1965,18 @@ function Upload_Contribution(){
                 	return $forms->PaymentForm();		
 			}else{
 				$filledMsg = Message("It seems you had already filled the below mentioned payment details, Kindly contact Secretary","alert-info");
-				/*$obj = new DB();
+				$filledMsg.="<table class='table'>";
+				$obj = new DB();
 				$query = "select * from iccm_payment_detail where uname='".$_SESSION["username"]."'";
 				$result = $obj->GetQueryResult($query);
 				$row = $result->fetch_assoc();
-				$filledMsg.="<tr><td>uname</td><td>Name</td><td>BankName</td>
-					  <td>Date of Transation</td><td>Ref. Number</td><td>
-					  Amount</td> </tr>";
-				$filledMsg.="<tr><td>uname</td><td>Name</td><td>BankName</td>
-					  <td>Date of Transation</td><td>Ref. Number</td><td>
-					  Amount</td> </tr>";
-*/
-				
+				$filledMsg.="<tr bgcolor='d5f9f9'><th>uname</th><th>Name</th><th>BankName</th>
+					  <th>Date of Transation</th><th>Ref. Number</th><th>
+					  Amount</th> </tr>";
+				$filledMsg.="<tr><td>".$row["uname"]."</td><td>".$row["name"]."</td><td>".$row["bankname"]."</td>
+					  <td>".$row["dateoftrans"]."</td><td>".$row["refnum"]."</td><td>".$row["amount"]."</td> </tr>";
+
+				$filledMsg.="</table>";
 
 				return $filledMsg;
 			}
