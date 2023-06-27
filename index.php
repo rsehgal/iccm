@@ -1,11 +1,4 @@
-<?php
-
-session_start();
-
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
-?>
+<!DOCTYPE html>
 
 <html lang="en">
     <head>
@@ -152,13 +145,6 @@ var dataUp=new FormData();
 	$(document).ready(function(){
 		$("#myModal").modal('show');
 
-//alert("Hiding YourTask...");
-$("#YourTasks").hide();	
-//alert($("#hiddenInfo").attr("loggedin"));
-if( $('#hiddenInfo').attr('loggedin')=='1'){
-$("#YourTasks").show();	
-}
-
   $('.iccmMenu').on('click',function(event){
 	//alert($(this).attr("id")+" called..");
 	event.preventDefault();
@@ -244,24 +230,10 @@ $("#Home").trigger("click");
 
 <!-- Page Header Start -->
 <div id='iccmheader' class='' ></div>
-<?php
-session_start();
-echo "<div class='text-center bg-dark text-light font-weight-bold'>
+
+<div class='text-center bg-dark text-light font-weight-bold'>
 <div id='YourTasks' class='iccmMenu' ><b>YourTasks</b></div>
-</div>";
-
-//echo "Sehgal : ".$_SESSION["loggedin"]."<br/>";
-if(isset($_SESSION["loggedin"])){
-echo '<input type="hidden" id="hiddenInfo" logintype="'.$_SESSION["logintype"].'" loggedin="'.$_SESSION["loggedin"].'" />';
-}
-echo "<script>
-	$(function(){
-
-	//alert('Raman Sehgal'); 
-	});
-
-	</script>";
-?>
+</div>
 
 <?php
                 require_once "helpers.php";
