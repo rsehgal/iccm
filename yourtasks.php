@@ -132,16 +132,26 @@ function AuthorTasks(){
     while($row = $resultReg->fetch_assoc()){
     if($row["uname"]=="admin"){
     }else{
+    
+    /*
     $tabMsg.= "<tr>";
     $tabMsg.= "<td> ".$row["uname"]." </td>";
     $tabMsg.= "<td> ".$row["firstname"]." </td>";
     $tabMsg.= "<td> ".$row["lastname"]." </td>";
     $tabMsg.= "<td> ".$row["email"]." </td>";
     $tabMsg.= "<td> ".$row["institute"]." </td>";
+    */
     
     $queryPayment = "select * from iccm_payment_detail where uname='".$row["uname"]."'";
     $resultPayment=$obj->GetQueryResult($queryPayment);
     if($resultPayment->num_rows === 0){
+        $tabMsg.= "<tr class='bg-warning'>";
+        $tabMsg.= "<td> ".$row["uname"]." </td>";
+        $tabMsg.= "<td> ".$row["firstname"]." </td>";
+        $tabMsg.= "<td> ".$row["lastname"]." </td>";
+        $tabMsg.= "<td> ".$row["email"]." </td>";
+        $tabMsg.= "<td> ".$row["institute"]." </td>";
+
     $tabMsg.="<td></td>";
     $tabMsg.="<td></td>";
     $tabMsg.="<td></td>";
@@ -149,6 +159,14 @@ function AuthorTasks(){
     $tabMsg.= "</tr>";
     }else{
     $row=$resultPayment->fetch_assoc();
+
+    $tabMsg.= "<tr class='bg-success'>";
+        $tabMsg.= "<td> ".$row["uname"]." </td>";
+        $tabMsg.= "<td> ".$row["firstname"]." </td>";
+        $tabMsg.= "<td> ".$row["lastname"]." </td>";
+        $tabMsg.= "<td> ".$row["email"]." </td>";
+        $tabMsg.= "<td> ".$row["institute"]." </td>";
+
     $tabMsg.="<td>".$row["bankname"]."</td>";
     $tabMsg.="<td>".$row["dateoftrans"]."</td>";
     $tabMsg.="<td>".$row["refnum"]."</td>";
