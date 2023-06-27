@@ -160,7 +160,7 @@ function AuthorTasks(){
     }else{
     $row=$resultPayment->fetch_assoc();
 
-    $tabMsg.= "<tr class='bg-success'>";
+    $tabMsg.= "<tr class='bg-success font-weight-bold'>";
         $tabMsg.= "<td> ".$row["uname"]." </td>";
         $tabMsg.= "<td> ".$row["firstname"]." </td>";
         $tabMsg.= "<td> ".$row["lastname"]." </td>";
