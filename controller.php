@@ -883,6 +883,13 @@ Account Number :</strong> 41779569690   |   <strong>CIF No:</strong> 91132643626
 
 </td>
 </tr>
+<tr>
+<td colspan="3" align="center" bgcolor="#E4E4E4">
+
+<strong> SWIFT CODE :</strong> SBININBB355, Hindu Colony, Dadar Branch   
+</td>
+</tr>
+
 
 
 
@@ -1939,29 +1946,49 @@ function Upload_Contribution(){
 	function PaymentForm(){
 		session_start();
 		if(isset($_SESSION["loggedin"])){
+			$counter=GetCounter("iccm_payment_detail");
+			if($counter==0){	
 			$forms = new Forms();
                 	return $forms->PaymentForm();		
+			}else{
+				$filledMsg = Message("It seems you had already filled the below mentioned payment details, Kindly contact Secretary","alert-info");
+				/*$obj = new DB();
+				$query = "select * from iccm_payment_detail where uname='".$_SESSION["username"]."'";
+				$result = $obj->GetQueryResult($query);
+				$row = $result->fetch_assoc();
+				$filledMsg.="<tr><td>uname</td><td>Name</td><td>BankName</td>
+					  <td>Date of Transation</td><td>Ref. Number</td><td>
+					  Amount</td> </tr>";
+				$filledMsg.="<tr><td>uname</td><td>Name</td><td>BankName</td>
+					  <td>Date of Transation</td><td>Ref. Number</td><td>
+					  Amount</td> </tr>";
+*/
+				
+
+				return $filledMsg;
+			}
         	}
 	        else{
         	    return Message("Please login to fill the payment details.");
         	}
 	}
 
-        /*function GetCounter($tablename){
+        function GetCounter($tablename){
 		session_start();
 		$obj = new DB();
-		$query="select count(*) as counter from $tablename where uname='".$_SESSION[]."'";
+		$query="select count(*) as counter from $tablename where uname='".$_SESSION["username"]."'";
 		$result=$obj->GetQueryResult($query);
-		$row=$result->fetch_assoc();
-		$counter=$row["counter"];
-		return $counter;
+		return $result->num_rows;
+		//$row=$result->fetch_assoc();
+		//$counter=$row["counter"];
+		//return $counter;
 
-	}*/
+	}
 
 	function ServePayment(){
 
 
-		$counter=0;//GetCounter("iccm_payment_detail");
+		$counter=GetCounter("iccm_payment_detail");
 		if($counter==0){
 		$obj = new DB();
 		$query = "insert into iccm_payment_detail values
@@ -1978,7 +2005,7 @@ function Upload_Contribution(){
 		else
 		return Message("Failed to register your payment details","alert-danger");
 		}else{
-		return Message("You had already filled the payment details","alert-info");
+		return Message("It seems you had already filled the payment details, Kindly contact Secretary","alert-info");
 		}
 	}        
     
