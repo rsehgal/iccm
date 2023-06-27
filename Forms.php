@@ -167,7 +167,7 @@ public function PaymentForm(){
                                 <input type="text" class="form-control paymentForm" id="amount" name="amount" required>
                         </div>
 
-                        <button type="submit" class="btn btn-primary paymentFormSubmit">Login</button>
+                        <button type="submit" class="btn btn-primary paymentFormSubmit">Submit</button>
 		</form>
 		<script>
 		$(".symposiaForms").on("submit",function(event){
