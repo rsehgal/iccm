@@ -145,7 +145,7 @@ function AuthorTasks(){
     $queryPayment = "select * from iccm_payment_detail where uname='".$row["uname"]."'";
     $resultPayment=$obj->GetQueryResult($queryPayment);
     if($resultPayment->num_rows === 0){
-        $tabMsg.= "<tr class='bg-warning'>";
+        $tabMsg.= "<tr class='bg-warning font-weight-bold' >";
         $tabMsg.= "<td> ".$row["uname"]." </td>";
         $tabMsg.= "<td> ".$row["firstname"]." </td>";
         $tabMsg.= "<td> ".$row["lastname"]." </td>";
