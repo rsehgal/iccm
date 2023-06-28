@@ -209,7 +209,7 @@ function AuthorTasks(){
                         method: 'POST',
                         data : data,
                         success: function(response) {
-				$('#result').html(response);
+				//$('#result').html(response);
                         }
                       });
 		});
@@ -280,6 +280,6 @@ readfile($zipFile);
 
 // Delete the temporary zip file
 unlink($zipFile);
-return Message("File downloaded","alert-info");
+//return Message("File downloaded","alert-info");
 } 
 ?>
