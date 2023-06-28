@@ -239,6 +239,20 @@ function GetAbstractTable($uname){
 }
 
 function DownloadAll(){
+shell_exec("rm -rf iccm_abstracts.zip");
+$paperDir = "Uploads";
+$destinationFile = "iccm_abstracts.zip";
+exec("zip -r $destinationFile $paperDir");
+/*echo '<script type="text/javascript">
+        alert("Zipping done.");
+      </script>';*/
+
+$filename='iccm_abstracts.zip';
+@header("Content-type: application/zip");
+@header("Content-Disposition: attachment; filename=$filename");
+}
+
+function DownloadAll2(){
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
