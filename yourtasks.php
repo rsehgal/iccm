@@ -128,6 +128,7 @@ function AuthorTasks(){
         <th>Trans. Date</th>
         <th>Ref. Number</th>
         <th>Amount</th>
+        <th>Abstract</th>
         </tr>";
     while($row = $resultReg->fetch_assoc()){
     if($row["uname"]=="admin"){
@@ -143,7 +144,8 @@ function AuthorTasks(){
     */
     
     $queryPayment = "select * from iccm_payment_detail where uname='".$row["uname"]."'";
-    $resultPayment=$obj->GetQueryResult($queryPayment);
+    $resultPayment=$obj->GetQueryResult($queryPayment);    
+
     if($resultPayment->num_rows === 0){
         $tabMsg.= "<tr class='bg-warning font-weight-bold' >";
         $tabMsg.= "<td> ".$row["uname"]." </td>";
@@ -156,9 +158,12 @@ function AuthorTasks(){
     $tabMsg.="<td></td>";
     $tabMsg.="<td></td>";
     $tabMsg.="<td></td>";
+    $tabMsg.="<td>".GetAbstractTable($row["uname"])."</td>";
     $tabMsg.= "</tr>";
     }else{
     $row=$resultPayment->fetch_assoc();
+
+
 
     $tabMsg.= "<tr class='bg-success font-weight-bold'>";
         $tabMsg.= "<td> ".$row["uname"]." </td>";
@@ -171,6 +176,17 @@ function AuthorTasks(){
     $tabMsg.="<td>".$row["dateoftrans"]."</td>";
     $tabMsg.="<td>".$row["refnum"]."</td>";
     $tabMsg.="<td>".$row["amount"]."</td>";
+    /*$tabMsg.="<td>
+		<table>";
+    while($rowAbs = $resAbs->fetch_assoc()){
+	$tabMsg.="<tr><td><a href='Uploads/".$rowAbs["Filename"]."'>".$rowAbs["Filename"]."</a></td></tr>";
+    }
+		
+	$tabMsg.="</table>
+	      </td>";*/
+
+    $tabMsg.="<td>".GetAbstractTable($row["uname"])."</td>";
+
     $tabMsg.= "</tr>";
     
     }
@@ -183,5 +199,20 @@ function AuthorTasks(){
     return Message("Please login","alert-danger");
     }
     }
-    
+   
+function GetAbstractTable($uname){
+    $obj = new DB();
+    $queryAbs = "select Filename from iccm_contributions where uname='".$uname."'";
+    $resAbs = $obj->GetQueryResult($queryAbs);
+	
+    $absTable="<table>";
+    while($rowAbs = $resAbs->fetch_assoc()){
+        $absTable.="<tr><td><a href='Uploads/".$rowAbs["Filename"]."'>".$rowAbs["Filename"]."</a></td></tr>";
+    }
+
+        $absTable.="</table>";
+
+	return $absTable;
+}
+ 
 ?>
