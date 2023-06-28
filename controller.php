@@ -202,7 +202,7 @@ function Home(){
     
     
     <h1 class="text-red blink-soft">
-    <span style="color:#900;"><strong> Deadline of abstract submission is July 30, 2023 </strong></span> 
+    <span style="color:#900;"><strong> Deadline of abstract submission is August 30, 2023 </strong></span> 
     </h1>
     <br>
     
@@ -1788,6 +1788,7 @@ function Upload_Contribution(){
                 $institute=$_POST['institute'];
                 $institute_add=$_POST['institute_add'];
                 $institute_type=$_POST['institute_type'];
+                $accomm_req=$_POST['accomm_req'];
                 $username=$_POST['username'];
                 $password=$_POST['password'];
                 $query='select uname from iccm_user_credentials where uname="'.$username.'"';
@@ -1803,7 +1804,7 @@ function Upload_Contribution(){
             
                 //$query = "insert into iccm_user_credentials values('$username','$password','$firstname','$lastname','$email',NOW())";
                 $query = "insert into iccm_user_credentials values('$firstname','$lastname',
-'$email','$contactno','$qualification','$designation','$institute','$institute_add','$institute_type','$username','$password',NOW())";
+'$email','$contactno','$qualification','$designation','$institute','$institute_add','$institute_type','$username','$password',NOW(),'$accomm_req')";
                 $obj->GetQueryResult($query);
                 $body="Dear $firstname $lastname, 
             

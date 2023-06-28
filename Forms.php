@@ -51,9 +51,14 @@ class Forms{
                                 <input type="text" class="form-control signupForm" id="institute_add" name="institute_add" required>
                         </div>
 
-						<div class="form-group">
+			<div class="form-group">
                                 <label for="institute_type">Institute Type:</label>
-                                <input type="text" class="form-control signupForm" id="institute_type" name="institute_type" placeholder="Industry/Academia" required>
+                                <input type="text" class="form-control signupForm" id="institute_type" name="institute_type" placeholder="Industry / Academia" required>
+                        </div>
+
+			<div class="form-group">
+                                <label for="accomm_req">Accommodation Required:</label>
+                                <input type="text" class="form-control signupForm" id="accomm_req" name="accomm_req" placeholder="Yes / No" required>
                         </div>
 
 						
