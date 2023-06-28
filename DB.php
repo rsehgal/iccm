@@ -110,6 +110,14 @@ public function MakeTableRow($row){
 	return $tabrow."</tr>";
 }
 
+public function GetCounter($tablename){
+        session_start();
+        $query = "select * from ".$tablename." where uname='".$_SESSION["username"]."'";
+        $result = $this->GetQueryResult($query);
+        return mysqli_num_rows($result);
+        //return $result->num_rows;
+}
+
 public function GetTableData($tableName,$showUname=0,$allowDeletion=0){
 	$table="<table border='1' class='table table-striped'>";
 	$columnNames = $this->GetFieldNames($tableName);

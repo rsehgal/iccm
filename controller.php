@@ -1960,7 +1960,7 @@ function Upload_Contribution(){
 		session_start();
 		if(isset($_SESSION["loggedin"])){
 			$counter=GetCounter("iccm_payment_detail");
-			if($counter==0){	
+			if($counter===0){	
 			$forms = new Forms();
                 	return $forms->PaymentForm();		
 			}else{
@@ -1986,17 +1986,10 @@ function Upload_Contribution(){
         	}
 	}
 
-        function GetCounter($tablename){
-		session_start();
-		$obj = new DB();
-		$query="select count(*) as counter from $tablename where uname='".$_SESSION["username"]."'";
-		$result=$obj->GetQueryResult($query);
-		return $result->num_rows;
-		//$row=$result->fetch_assoc();
-		//$counter=$row["counter"];
-		//return $counter;
-
-	}
+	function GetCounter($tablename){
+                $obj = new DB();
+                return $obj->GetCounter($tablename);
+        }
 
 	function ServePayment(){
 
