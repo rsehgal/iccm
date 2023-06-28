@@ -128,7 +128,7 @@ function AuthorTasks(){
         <th>Trans. Date</th>
         <th>Ref. Number</th>
         <th>Amount</th>
-        <th>Abstract</th>
+        <th>Abstract <input type='button' id='DownloadAll' class='btn btn-primary' value='Download All'/></th>
         </tr>";
     while($row = $resultReg->fetch_assoc()){
     if($row["uname"]=="admin"){
@@ -194,7 +194,30 @@ function AuthorTasks(){
     }
     $tabMsg.="</table>";
     //$result->free();
-    return $tabMsg;
+
+    $associatedJs = "<script>
+       $(function(){
+               var data={};
+               $('#DownloadAll').click(function(e){
+               e.preventDefault();
+                    var funcName=$(this).attr('id');
+                    alert(funcName);
+                    data['function_name']=funcName;
+                    console.log(data);
+                    $.ajax({
+                        url: 'controller.php',
+                        method: 'POST',
+                        data : data,
+                        success: function(response) {
+				$('#result').html(response);
+                        }
+                      });
+		});
+		});
+		      </script>";
+
+    return $tabMsg.$associatedJs;
+
     }else{
     return Message("Please login","alert-danger");
     }
@@ -214,5 +237,49 @@ function GetAbstractTable($uname){
 
 	return $absTable;
 }
- 
+
+function DownloadAll(){
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Define the path to the folder you want to zip and download
+$folderPath = 'Uploads';
+
+// Create a temporary zip file
+$zipFile = tempnam(sys_get_temp_dir(), 'iccm_abstracts');
+$zip = new ZipArchive();
+$zip->open($zipFile, ZipArchive::CREATE | ZipArchive::OVERWRITE);
+
+// Add all files and directories from the folder to the zip archive
+$files = new RecursiveIteratorIterator(
+    new RecursiveDirectoryIterator($folderPath),
+    RecursiveIteratorIterator::LEAVES_ONLY
+);
+
+foreach ($files as $name => $file) {
+    // Skip directories (they are added automatically)
+    if (!$file->isDir()) {
+        $filePath = $file->getRealPath();
+        $relativePath = substr($filePath, strlen($folderPath) + 1);
+
+        $zip->addFile($filePath, $relativePath);
+    }
+}
+
+// Close the zip archive
+$zip->close();
+
+// Set the appropriate headers for the download
+header('Content-Type: application/zip');
+header('Content-Disposition: attachment; filename="iccm_abstracts.zip"');
+header('Content-Length: ' . filesize($zipFile));
+
+// Read the zip file and output it to the browser
+readfile($zipFile);
+
+// Delete the temporary zip file
+unlink($zipFile);
+return Message("File downloaded","alert-info");
+} 
 ?>
