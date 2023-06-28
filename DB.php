@@ -110,9 +110,21 @@ public function MakeTableRow($row){
 	return $tabrow."</tr>";
 }
 
-public function GetCounter($tablename){
+/*public function GetCounter($tablename){
         session_start();
         $query = "select * from ".$tablename." where uname='".$_SESSION["username"]."'";
+        $result = $this->GetQueryResult($query);
+        return mysqli_num_rows($result);
+        //return $result->num_rows;
+}*/
+
+public function GetCounter($tablename,$uname=""){
+        session_start();
+        $query="";
+        if($uname === "")
+        $query = "select * from ".$tablename." where uname='".$_SESSION["username"]."'";
+        else
+        $query = "select * from ".$tablename." where uname='".$uname."'";
         $result = $this->GetQueryResult($query);
         return mysqli_num_rows($result);
         //return $result->num_rows;

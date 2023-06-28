@@ -145,9 +145,12 @@ function AuthorTasks(){
     */
     
     $queryPayment = "select * from iccm_payment_detail where uname='".$row["uname"]."'";
-    $resultPayment=$obj->GetQueryResult($queryPayment);    
+    $resultPayment=$obj->GetQueryResult($queryPayment);   
+     
+    $paymentCounter = $obj->GetCounter("iccm_payment_detail",$row["uname"]); 
 
-    if($resultPayment->num_rows === 0){
+    //if($resultPayment->num_rows === 0){
+    if($paymentCounter === 0){
         $tabMsg.= "<tr class='bg-warning font-weight-bold' >";
         $tabMsg.= "<td> ".$row["uname"]." </td>";
         $tabMsg.= "<td> ".$row["firstname"]." </td>";
@@ -163,7 +166,7 @@ function AuthorTasks(){
     $tabMsg.="<td>".GetAbstractTable($row["uname"])."</td>";
     $tabMsg.= "</tr>";
     }else{
-    $row=$resultPayment->fetch_assoc();
+    $rowResPayment=$resultPayment->fetch_assoc();
 
 
 
@@ -175,10 +178,10 @@ function AuthorTasks(){
         $tabMsg.= "<td> ".$row["institute"]." </td>";
         $tabMsg.= "<td> ".$row["accomm_req"]." </td>";
 
-    $tabMsg.="<td>".$row["bankname"]."</td>";
-    $tabMsg.="<td>".$row["dateoftrans"]."</td>";
-    $tabMsg.="<td>".$row["refnum"]."</td>";
-    $tabMsg.="<td>".$row["amount"]."</td>";
+    $tabMsg.="<td>".$rowResPayment["bankname"]."</td>";
+    $tabMsg.="<td>".$rowResPayment["dateoftrans"]."</td>";
+    $tabMsg.="<td>".$rowResPayment["refnum"]."</td>";
+    $tabMsg.="<td>".$rowResPayment["amount"]."</td>";
     /*$tabMsg.="<td>
 		<table>";
     while($rowAbs = $resAbs->fetch_assoc()){
