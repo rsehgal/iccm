@@ -124,6 +124,7 @@ function AuthorTasks(){
         <th>LastName</th>
         <th>Email</th>
         <th>Institute</th>
+        <th>Accomm Req.</th>
         <th>BankName</th>
         <th>Trans. Date</th>
         <th>Ref. Number</th>
@@ -153,6 +154,7 @@ function AuthorTasks(){
         $tabMsg.= "<td> ".$row["lastname"]." </td>";
         $tabMsg.= "<td> ".$row["email"]." </td>";
         $tabMsg.= "<td> ".$row["institute"]." </td>";
+        $tabMsg.= "<td> ".$row["accomm_req"]." </td>";
 
     $tabMsg.="<td></td>";
     $tabMsg.="<td></td>";
@@ -171,6 +173,7 @@ function AuthorTasks(){
         $tabMsg.= "<td> ".$row["lastname"]." </td>";
         $tabMsg.= "<td> ".$row["email"]." </td>";
         $tabMsg.= "<td> ".$row["institute"]." </td>";
+        $tabMsg.= "<td> ".$row["accomm_req"]." </td>";
 
     $tabMsg.="<td>".$row["bankname"]."</td>";
     $tabMsg.="<td>".$row["dateoftrans"]."</td>";
