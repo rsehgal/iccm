@@ -279,7 +279,7 @@ header('Content-Length: ' . filesize($zipFile));
 readfile($zipFile);
 
 // Delete the temporary zip file
-unlink($zipFile);
+//unlink($zipFile);
 //return Message("File downloaded","alert-info");
 } 
 ?>
