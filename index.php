@@ -115,6 +115,10 @@ var dataUp=new FormData();
 
 <style>
 
+.highlight {
+      background-color: yellow;
+    }
+
 .blink-hard {
   animation: blinker 3s infinite /*step-end*/ /*infinite*/;
   font-size:18px;
@@ -230,8 +234,9 @@ $("#Home").trigger("click");
 
 <!-- Page Header Start -->
 <div id='iccmheader' class='' ></div>
-<div class='text-center bg-dark text-light font-weight-bold'>
-<div id='YourTasks' class='iccmMenu' ><b>YourTasks</b></div>
+<!-- <div class='text-center bg-dark text-light font-weight-bold'> -->
+<div class='text-center text-danger font-weight-bold'>
+<div id='YourTasks' class='iccmMenu' ><b><mark class='text-danger highlight'>YourTasks</mark></b></div>
 </div>
 
 <?php
