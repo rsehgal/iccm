@@ -1854,6 +1854,7 @@ function Upload_Contribution(){
                         $authorEmailsList=$_POST['authoremailslist'];
 			$abstype=$_POST['abstype'];
 			$abspref=$_POST['abspref'];
+			$ext=$_POST['ext'];
                         //echo $targetDirectory."<br/>";
                         //echo basename($_FILES['file']['name'])."<br/>";
             
@@ -1869,7 +1870,7 @@ function Upload_Contribution(){
                             $row = $result->fetch_assoc();
                             $count=$row["count"];
                             $count++;
-                        $renamedFileName=$_SESSION["username"].'_paper_'.$topicId.'_'.$count.'.pdf';
+                        $renamedFileName=$_SESSION["username"].'_paper_'.$topicId.'_'.$count.'.'.$ext;
                         //$targetFilePath = $targetDirectory . basename($_FILES['file']['name']); // Get the file path
                         $targetFilePath = $targetDirectory.$renamedFileName; // Get the file path
                         //echo "Taget file path :".$targetFilePath."<br/>";

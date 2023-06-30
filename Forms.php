@@ -540,7 +540,7 @@ public function Register($fieldNames){
 
    $fileComponent='<div class="custom-file mb-3">
       <input type="file" class="custom-file-input uploadFile form-control" id="uploadFile" loc="./'.$loc.'" name="uploadFile" required>
-      <label class="custom-file-label" for="uploadFile">Choose file</label>
+      <label class="custom-file-label" for="uploadFile">DOC file only</label>
     </div>';
     $formContent.=$fileComponent;
 				//$uploadObj = new Components();
@@ -587,6 +587,14 @@ else
 		$(".custom-file-input").on("change",function(e){
 			//alert("file selected...");
 			var fileName = e.target.files[0].name;
+			//alert(fileName);
+		        var ext = fileName.split(".").pop();
+			if(ext!="doc"){
+				alert("Kindly upload the doc file.");
+				return ;
+			}
+			dataUp.append("ext",ext);
+			//alert(ext);
 			//alert(fileName);
 
 			if(e.target.files[0].size > 1048576){
