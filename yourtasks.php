@@ -231,12 +231,17 @@ function AuthorTasks(){
    
 function GetAbstractTable($uname){
     $obj = new DB();
-    $queryAbs = "select Filename from iccm_contributions where uname='".$uname."'";
+    $queryAbs = "select Filename,AbstractType,Preference from iccm_contributions where uname='".$uname."'";
     $resAbs = $obj->GetQueryResult($queryAbs);
 	
-    $absTable="<table>";
+    $absTable="<table>
+		<tr><th>Abstract</th><th>Type</th><th>Preference</th></tr>";
     while($rowAbs = $resAbs->fetch_assoc()){
-        $absTable.="<tr><td><a href='Uploads/".$rowAbs["Filename"]."'>".$rowAbs["Filename"]."</a></td></tr>";
+        $absTable.="<tr>
+			<td><a href='Uploads/".$rowAbs["Filename"]."'>".$rowAbs["Filename"]."</a></td>
+			<td>".$rowAbs["AbstractType"]."</td>
+			<td>".$rowAbs["Preference"]."</td>
+		    </tr>";
     }
 
         $absTable.="</table>";
