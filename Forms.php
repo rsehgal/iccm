@@ -545,7 +545,26 @@ public function Register($fieldNames){
     $formContent.=$fileComponent;
 				//$uploadObj = new Components();
 				//$formContent.=$uploadObj->RenderFileUpload();
-			}else
+			}
+			elseif($fieldNames[$i]=="AbstractType"){
+
+			$selAccReq= '<select class="form-control topicList registration" id="absTypeDropDown" required>';
+                        $selAccReq.='<option value="None" >' . 'None' . '</option>';
+                        $selAccReq.='<option value="Invited" myid="INVT" >' . 'Invited' . '</option>';
+                        $selAccReq.='<option value="Contributed" myid="CONT" >' . 'Contributed' . '</option>';
+			$selAccReq.='</select></div>';
+			$formContent.=$selAccReq;
+}
+			elseif($fieldNames[$i]=="Preference"){
+
+			$selAccReq= '<select class="form-control topicList registration" id="preferenceDropDown" required>';
+                        $selAccReq.='<option value="None" >' . 'None' . '</option>';
+                        $selAccReq.='<option value="Oral" myid="ORAL" >' . 'Oral' . '</option>';
+                        $selAccReq.='<option value="Poster" myid="POSTER" >' . 'Poster' . '</option>';
+			$selAccReq.='</select></div>';
+			$formContent.=$selAccReq;
+}
+else
 				$formContent.='
                                 <input type="text" class="form-control" id="'.$fieldNames[$i].'" name="'.$fieldNames[$i].'" required />
                         </div>
@@ -593,6 +612,22 @@ public function Register($fieldNames){
 			dataUp.append("topicid",$("option:selected", this).attr("myid"));
 
 		});
+
+		$("#absTypeDropDown").on("change",function(){
+
+                        //alert($(this).val());
+                        //alert($("option:selected", this).attr("myid"));
+                        dataUp.append("abstype",$("option:selected", this).attr("myid"));
+
+                });
+
+		$("#preferenceDropDown").on("change",function(){
+
+                        //alert($(this).val());
+                        //alert($("option:selected", this).attr("myid"));
+                        dataUp.append("abspref",$("option:selected", this).attr("myid"));
+
+                });
 		$("#uploadAndSubmit").click(function(){
 
 			if($("#topicDropDown").val()=="None"){
@@ -638,6 +673,16 @@ public function Register($fieldNames){
 			//alert($("#Title").val());
 			dataUp.append("title",$("#Title").val());
 
+
+			if($("#absTypeDropDown").val()=="None"){
+                                alert("Please select the AbstractType");
+                                return ;
+                        }
+
+			if($("#preferenceDropDown").val()=="None"){
+                                alert("Please select the Preference");
+                                return ;
+                        }
 			//alert("Submit clicked...");
 			var authorNameTextBoxValues = $(".authorname").map(function() {
 				return $(this).val();

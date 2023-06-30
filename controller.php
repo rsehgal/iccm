@@ -1677,7 +1677,7 @@ function Upload_Contribution(){
                 $obj = new DB();
                     //$obj->Set('127.0.0.1','sympadmin','sympadmin','symposia');
                     //$obj->Connect();
-                $fieldNames = $obj->GetFieldNames("contributions");
+                $fieldNames = $obj->GetFieldNames("iccm_contributions");
                 //return count($fieldNames);
             
                 $forms = new Forms();
@@ -1852,6 +1852,8 @@ function Upload_Contribution(){
                         $topicId = $_POST['topicid'];
                         $authorNamesList=$_POST['authornameslist'];
                         $authorEmailsList=$_POST['authoremailslist'];
+			$abstype=$_POST['abstype'];
+			$abspref=$_POST['abspref'];
                         //echo $targetDirectory."<br/>";
                         //echo basename($_FILES['file']['name'])."<br/>";
             
@@ -1873,7 +1875,7 @@ function Upload_Contribution(){
                         //echo "Taget file path :".$targetFilePath."<br/>";
                         if (move_uploaded_file($_FILES['file']['tmp_name'], $targetFilePath)) {
                             //echo 'File uploaded successfully.<br/>';
-                            $query='insert into iccm_contributions values("'.$_SESSION["username"].'","'.$topicId.'","'.$_POST["title"].'","'.$renamedFileName.'","submitted","'.$authorNamesList.'","'.$authorEmailsList.'","","")';
+                            $query='insert into iccm_contributions values("'.$_SESSION["username"].'","'.$topicId.'","'.$_POST["title"].'","'.$renamedFileName.'","submitted","'.$authorNamesList.'","'.$authorEmailsList.'","","","'.$abstype.'","'.$abspref.'")';
                             //echo $query."<br/>";
                                             $obj->GetQueryResult($query);
             $body="Dear ".$_SESSION["username"].", 
