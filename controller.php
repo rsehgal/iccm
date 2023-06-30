@@ -202,7 +202,7 @@ function Home(){
     
     
     <h1 class="text-red blink-soft">
-    <span style="color:#900;"><strong> Deadline of abstract submission is August 15, 2023 </strong></span> 
+    <span style="color:#900;"><strong> Deadline of abstract submission is July 30, 2023 </strong></span> 
     </h1>
     <br>
     
