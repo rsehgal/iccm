@@ -591,6 +591,7 @@ else
 		        var ext = fileName.split(".").pop();
 			if(ext!="doc"){
 				alert("Kindly upload the doc file.");
+				form.reset();
 				return ;
 			}
 			dataUp.append("ext",ext);
