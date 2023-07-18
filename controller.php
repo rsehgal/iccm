@@ -1805,7 +1805,10 @@ function Upload_Contribution(){
                 //$query = "insert into iccm_user_credentials values('$username','$password','$firstname','$lastname','$email',NOW())";
                 $query = "insert into iccm_user_credentials values('$firstname','$lastname',
 '$email','$contactno','$qualification','$designation','$institute','$institute_add','$institute_type','$username','$password',NOW(),'$accomm_req')";
-                $obj->GetQueryResult($query);
+                $result=$obj->GetQueryResult($query);
+		if($result===false)
+                                return Message("Query execution fails","alert-danger");
+
                 $body="Dear $firstname $lastname, 
             
             Your Account is successfully created with following details:
