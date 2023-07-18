@@ -236,7 +236,7 @@ $("#Home").trigger("click");
 <div id='iccmheader' class='' ></div>
 <!-- <div class='text-center bg-dark text-light font-weight-bold'> -->
 <div class='text-center text-danger font-weight-bold'>
-<div id='YourTasks' class='iccmMenu' ><b><mark class='text-danger highlight'>YourTasks</mark></b></div>
+<div id='YourTasks' class='iccmMenu' ><b><mark class='text-dark'>YourTasks</mark></b></div>
 </div>
 
 <?php

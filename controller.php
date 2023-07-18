@@ -1806,8 +1806,12 @@ function Upload_Contribution(){
                 $query = "insert into iccm_user_credentials values('$firstname','$lastname',
 '$email','$contactno','$qualification','$designation','$institute','$institute_add','$institute_type','$username','$password',NOW(),'$accomm_req')";
                 $result=$obj->GetQueryResult($query);
-		if($result===false)
-                                return Message("Query execution fails <br/> Kindly send following string to admin <br/>".$query,"alert-danger");
+		if($result===false){
+                                return Message("Query execution fails","alert-danger");
+				$errString = "Query execution fails 
+						".$query;
+				SendMail("newaccount","sc.ramansehgal@gmail.com","ERROR report for user : ".$username,$errString);
+		}
 
                 $body="Dear $firstname $lastname, 
             
