@@ -1807,7 +1807,7 @@ function Upload_Contribution(){
 '$email','$contactno','$qualification','$designation','$institute','$institute_add','$institute_type','$username','$password',NOW(),'$accomm_req')";
                 $result=$obj->GetQueryResult($query);
 		if($result===false)
-                                return Message("Query execution fails","alert-danger");
+                                return Message("Query execution fails <br/> Kindly send following string to admin <br/>".$query,"alert-danger");
 
                 $body="Dear $firstname $lastname, 
             
