@@ -1008,6 +1008,57 @@ function Sponsor(){
 
 }
 function Speakers(){
+$speakersMsg='
+		<div class="row">                
+			<div class="col-2 text-center">
+			    <img src="img/speakers/1.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof.Marc Monthioux,<br/> CEMES,<br/> France 
+				</speaker>
+			</div>
+			<div class="col-2 text-center">
+			    <img src="img/speakers/2.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof.Rahul Raveendran Nair,<br/> University of Manchester,<br/> UK 
+				</speaker>
+			</div>
+			<div class="col-2 text-center">
+			    <img src="img/speakers/3.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof.Albert Nasibulin,<br/> Skolkovo Institute of Science and
+Technology,<br/> Russia 
+				</speaker>
+			</div>
+			<div class="col-2 text-center">
+			    <img src="img/speakers/4.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. Dmitry Krasnikov,<br/> Skolkovo Institute of Science and
+Technology,<br/> Russia 
+				</speaker>
+			</div>
+			<div class="col-2 text-center">
+			    <img src="img/speakers/5.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. Y. Mao,<br/> Illinois Institute of Technology,<br/> USA 
+				</speaker>
+			</div>
+
+			<div class="col-2 text-center">
+			    <img src="img/speakers/6.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Dr. OP Bahl, ,<br/> ICS,<br/> India 
+				</speaker>
+			</div>
+
+
+
+
+
+
+	      </div>';
+return $speakersMsg;
+    
+
 
     $speakersMsg='<div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-main.jpg); background-attachment:fixed; padding-top:50px; padding-bottom:50px;">
     <div class="container">
