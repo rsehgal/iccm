@@ -1030,7 +1030,7 @@ Technology,<br/> Russia
 				</speaker>
 			</div>
 			<div class="col-2 text-center">
-			    <img src="img/speakers/4.jpg" width="80%"><br/>
+			    <img src="img/speakers/4.jpeg" width="80%"><br/>
 			    	<speaker class="font-weight-bold">
 					Prof. Dmitry Krasnikov,<br/> Skolkovo Institute of Science and
 Technology,<br/> Russia 
@@ -1044,7 +1044,7 @@ Technology,<br/> Russia
 			</div>
 
 			<div class="col-2 text-center">
-			    <img src="img/speakers/6.jpg" width="80%"><br/>
+			    <img src="img/speakers/6.JPG" width="80%"><br/>
 			    	<speaker class="font-weight-bold">
 					Dr. OP Bahl, ,<br/> ICS,<br/> India 
 				</speaker>
