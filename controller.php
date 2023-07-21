@@ -47,13 +47,13 @@ function Home(){
           
           
           <div style="background-color:none; padding-bottom: 10px;"> <!--padding-top: 20px;-->
-        
+-     
         <div class="countdown" id="js-countdown">
+
     <div class="countdown__item countdown__item">
-    <div class="countdown__timer js-countdown-days" aria-labelledby="day-countdown">
+  <!--  <div class="countdown__timer js-countdown-days" aria-labelledby="day-countdown">
     
     </div>
-    
     <div class="countdown__label" id="day-countdown">Days</div>
     </div>
     
@@ -79,7 +79,7 @@ function Home(){
     </div>
     
     <div class="countdown__label" id="second-countdown">Seconds</div>
-    
+    -->
     <script type="text/javascript">
     // ========================== //
     // 2017 Countdown JS
