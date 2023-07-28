@@ -202,10 +202,15 @@ function Home(){
     
     
     <h1 class="text-red blink-soft">
-    <span style="color:#900;"><strong> Deadline of abstract submission is July 30, 2023 </strong></span> 
+    <span style="color:#900;"><strong> Deadline of abstract submission is August 30, 2023 </strong></span> 
     </h1>
     <br>
     
+    <h1 class="text-red blink-soft">
+    <span style="color:#900;"><strong> Deadline for the Nominations of Awards is <br/>September 30, 2023 </strong></span> 
+    </h1>
+    <br>
+
     
     <h1 class="text-red blink-hard">
     <span style="color:#900;"><a><strong>Early bird registration closes on October 01, 2023</strong></a></span> 
@@ -399,9 +404,23 @@ function Home(){
     </div>  
     </div>
     </div>
-    </div>
+    </div>';
+
+
+$homeMsg.='<hr/>';
+
+$homeMsg.=' <div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-orgcom.jpg); background-attachment:fixed;">
+    <div class="container">
     
-    
+    <div class="section-header text-center">
+    <br/><br/> 
+            <h3 style="color:#FFF;"><strong>SPEAKERS</strong></h3>
+    <br/>
+';
+
+$homeMsg.=Speakers();
+$homeMsg.='</div></div></div>';
+$homeMsg.=' 
     <!-- org committee End -->
     <!-- FAQs End -->
     
@@ -853,7 +872,7 @@ function Registration(){
 <td align="center" bgcolor="#F5F5F5">INR 2500</td>
 </tr>
 <tr>
-<td align="center" bgcolor="#E4E4E4">Non-Members (Academic)</td>
+<td align="center" bgcolor="#E4E4E4">Non-Members (Academic / Government Institutions)</td>
 <td align="center" bgcolor="#E4E4E4">INR 5500</td>
 <td align="center" bgcolor="#E4E4E4">INR 6000</td>
 </tr>
@@ -953,7 +972,50 @@ function Accommodation(){
                
                 <div class="about-text">
                     <p align="left">
-                     <strong>Details will be updated shortly...</strong>
+			<table class="table table-bordered table-striped">
+			<tr><td><h3>FOUR POINTS BY SHERATON, VASHI</h3></td><td></td></tr>
+			<tr><td>Single occupancy</td><td>Rs. 8500 + tax per day </td></tr>
+			<tr><td>Double occupancy</td><td>Rs. 9500 + tax per day</td></tr>
+			<tr><td>Sales Manager</td><td>Vishal Pawar</td></tr>
+			<tr><td>Contact Number</td><td>+91-22-61587777 / +91-8879788810</td></tr>
+			<tr><td> INCLUSIONS:<br/>
+
+     * Complimentary Buffet Breakfast at Asian Kitchen Restaurant.<br/>
+    * Complimentary Wi-⁠⁠Fi access in Room & Lobby area.<br/>
+    * Complimentary access to Fitness centre & Swimming Pool</td> 
+
+	<td></td></tr>
+			</table>
+
+			<br/><br/>
+			<table class="table table-bordered table-striped">
+			<tr><td><h3>FERN RESIDENCY, Chembur</h3></td><td></td></tr>
+			<tr><td>Single occupancy</td><td>Rs. 7000 + 12% tax per day </td></tr>
+			<tr><td>Double occupancy</td><td>Rs. 7500 + 12% tax per day</td></tr>
+			<tr><td>Extra Bed charges for Triple occ.</td><td>Rs. 1000 + 12% tax per day</td></tr>
+			<tr><td>Sales Manager</td><td>Kiran Jadhav</td></tr>
+			<tr><td>Contact Number</td><td>+91-022-68541100 / +91-8879651106 </td></tr>
+
+			<tr><td> INCLUSION :<br/>
+			Accommodation.
+*  Tea/⁠⁠coffee maker in each room<br/>
+*  02 bottles of water in the accommodation per day.<br/>
+*  Complimentary breakfast buffet in art house restaurant for Inhouse guest<br/>
+*  Complimentary usage of Wi-⁠⁠Fi in the rooms<br/>
+*  Complimentary usage of Gymnasium & Swimming pool @ The Acres Club<br/>
+			</td><td></td></tr>
+			</table>
+
+			<br/><br/>
+			<table class="table table-bordered table-striped">
+			<tr><td><h3>HOTEL BROADWAY, Chembur</h3></td><td></td></tr>
+			<tr><td>Single occupancy</td><td>Rs. 2750 + tax per day </td></tr>
+			<tr><td>Double occupancy></td><td>Rs. 3250 + tax per day</td></tr>
+			<tr><td></td><td></td></tr>
+			</table>
+
+
+			
 <!--<a class="btn" href="#">Read More</a>-->
 </p>
                     
@@ -1009,7 +1071,7 @@ function Sponsor(){
 }
 function Speakers(){
 $speakersMsg='
-		<div class="row">                
+		<div class="row text-light">                
 			<div class="col-2 text-center">
 			    <img src="img/speakers/1.jpg" width="80%"><br/>
 			    	<speaker class="font-weight-bold">

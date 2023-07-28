@@ -89,8 +89,8 @@ function IccmMenu(){
                         <a href="#" class="nav-item nav-link iccmMenu" id="PaymentForm" value="Payment">Payment</a>
                         <a href="programme.html" class="nav-item nav-link iccmMenu" id="Programme" value="Programme">Programme</a>
                         <a href="abstract.html" class="nav-item nav-link iccmMenu" id="Abst" value="Abstract">Abstract</a>
-                        <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers" value="Speakers">Speakers</a>
-                        <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue" value="Venue">Venue</a>
+                        <!-- <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers" value="Speakers">Speakers</a> -->
+                        <!-- <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue" value="Venue">Venue</a> -->
                         <a href="accommodation.html" class="nav-item nav-link iccmMenu" id="Accommodation" value="Accommodation">Accommodation</a>
                         <a href="sponsors.html" class="nav-item nav-link iccmMenu" id="Sponsor" value="Sponsor">Sponsor</a>
                          <div class="nav-item dropdown">
@@ -99,6 +99,7 @@ function IccmMenu(){
                               <a href="pdf/Best PhD Thesis Award.doc" target="_blank" class="dropdown-item"> Best PhD Thesis Award</a>
                                 <a href="pdf/Best Innovation Award.doc" target="_blank" class="dropdown-item"> Best Innovation Award</a>
                                 <a href="pdf/BD Bangur Award.doc" target="_blank" class="dropdown-item"> BD Bangur Award</a>
+                                <a href="pdf/LNJ Award.doc" target="_blank" class="dropdown-item"> LNJ Award</a>
                          </div>
                      </div>
 
