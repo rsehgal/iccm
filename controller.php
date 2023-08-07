@@ -967,6 +967,15 @@ function Accommodation(){
     $accommodationMsg='<div class="about wow fadeInUp" data-wow-delay="0.1s" style="background:#E7F2F6; background-image:url(img/bg-main.jpg); background-attachment:fixed; padding-top:50px; padding-bottom:50px;">
     <div class="container">
         <div class="row align-items-center">
+
+	<h3 class="font-weight-bold text-primary">Arrangements will be made on payment basis to accommodate the participants in the BARC Guest house on first come first serve basis.</h3>
+
+
+<h4 class="font-weight-bold">NOTE :  <br/>(i) Limited accommodation available in BARC guest house, Anushaktinagar (near conference venue) for participants.</h4>
+
+<h4 class="font-weight-bold"> (ii) Limited accommodation available for students on nominal rate in the BARC guest house, Anushaktinagar (near conference venue). <h4>
+<hr/>
+	<h3 class="font-weight-bold text-primary">These are the suggested hotels with tariff near to the conference venue, individual can book directly from hotel for their stay during conference period.</h3>  
             
             <div class="col-lg-12 col-md-6">
                
@@ -1853,7 +1862,101 @@ function Upload_Contribution(){
                     </div>
                 </div>
                 <!-- About End -->';
-            
+           
+		$venueMsg = '<br/><hr/><venue class="text-primary text-center">'.
+				Message("DAE Convention center, Bhabha Atomic Research Centre, Anushakti Nagar, Mumbai-400094","alert-primary").
+				'<div class="row bg-primary text-light border">
+					 <div class="col-6 border">
+					 	From Airport
+					 </div>
+					 <div class="col-6 border">
+						Time
+					 </div>
+
+				</div><div class="row border" >
+					 <div class="col-6 border">
+						By Car
+					 </div>
+					 <div class="col-6 border">
+						1 hr.
+					 </div>
+
+				</div><div class="row">
+					 <div class="col-6 border">
+						By Bus
+					 </div>
+					 <div class="col-6 border">
+						1 hr. 30 min.
+					 </div>
+
+				</div><div class="row">
+					 <div class="col-6 border">
+						By Train
+					 </div>
+					 <div class="col-6 border">
+						45 min.
+					 </div>
+
+				</div>
+				<hr/>
+
+
+				<div class="row bg-primary text-light">
+					 <div class="col-6 border">
+					  	From Mumbai Central / Chhatrapati Shivaji Maharaj Terminus
+					 </div>
+					 <div class="col-6 border">
+						Time
+					 </div>
+
+				</div><div class="row">
+					 <div class="col-6 border">
+					 	By Car
+					 </div>
+					 <div class="col-6 border">
+						45 min.
+					 </div>
+
+				</div><div class="row">
+					 <div class="col-6 border">
+						By Bus
+					 </div>
+					 <div class="col-6 border">
+						1 hr. 30 min.
+					 </div>
+
+				</div><div class="row">
+					 <div class="col-6 border">
+						By Train
+					 </div>
+					 <div class="col-6 border">
+						1 hr.
+					 </div>
+
+				</div>
+
+				<div class="row">
+					<div class="col font-weight-bold text-dark">
+						Nearest local Railway Station :  Mankhurd (Harbour Line)
+					</div>
+				</div>';
+
+				'<!-- <table class="table table-striped table-bordered">
+				<tr class="bg-primary text-light"><th>From Airport</th><th>Time</th></tr>
+				<tr><td>By Car</td><td>1 hr.</td></tr>
+				<tr><td>By Bus</td><td>1 hr 30 min.</td></tr>
+				<tr><td>By Train</td><td>45 min.</td></tr>
+				</table> -->';
+
+		$venueMsg.='<!-- <table class="table table-striped table-bordered">
+				<tr class="bg-primary text-light"><th>From Mumbai Central / Chhatrapati Shivaji Maharaj Terminus</th><th>Time</th></tr>
+				<tr><td>By Car</td><td>45 min.</td></tr>
+				<tr><td>By Bus</td><td>1 hr 30 min.</td></tr>
+				<tr><td>By Train</td><td>1 hr.</td></tr>
+				</table> -->';
+
+		$venueMsg.='</venue>';
+ 
                 return $venueMsg;
             }
             

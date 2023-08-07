@@ -90,7 +90,7 @@ function IccmMenu(){
                         <a href="programme.html" class="nav-item nav-link iccmMenu" id="Programme" value="Programme">Programme</a>
                         <a href="abstract.html" class="nav-item nav-link iccmMenu" id="Abst" value="Abstract">Abstract</a>
                         <!-- <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers" value="Speakers">Speakers</a> -->
-                        <!-- <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue" value="Venue">Venue</a> -->
+                        <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue" value="Venue">Venue</a>
                         <a href="accommodation.html" class="nav-item nav-link iccmMenu" id="Accommodation" value="Accommodation">Accommodation</a>
                         <a href="sponsors.html" class="nav-item nav-link iccmMenu" id="Sponsor" value="Sponsor">Sponsor</a>
                          <div class="nav-item dropdown">
