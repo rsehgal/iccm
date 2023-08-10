@@ -595,21 +595,26 @@ $homeMsg.='
     
     
     <!-- Start WOWSlider.com BODY section --> <!-- add to the <body> of your page -->
+   <!-- 
     <div id="wowslider-container1">
     <div class="ws_images"><ul>
-    <li><img src="data1/images/1.jpg" alt="css image gallery" title="1" id="wows1_0"/></li>
-    <li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_1"/></li>
-    <!--<li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_2"/></li>
-    <li><img src="data1/images/4.jpg" alt="3" title="3" id="wows1_2"/></li>
-    <li><img src="data1/images/5.jpg" alt="4" title="4" id="wows1_3"/></li>-->
+    <li><img src="data1/images/3.png" alt="css image gallery" title="1" id="wows1_0"/></li>
+    <li><img src="data1/images/4.png" alt="2" title="2" id="wows1_1"/></li>
     </ul></div>
     <div class="ws_script" style="position:absolute;left:-99%"><a href="#"></a> </div>
     <div class="ws_shadow"></div>
     </div>	
     <script type="text/javascript" src="engine1/wowslider.js"></script>
     <script type="text/javascript" src="engine1/script.js"></script>
+  -->
+    <center>
+    <table class="text-center">
+	<tr><td><h2>Platinum Sponsor</h2></td><td><img src="img/s1.png"/></td><td></td></tr>
+	<tr><td><h2>Gold Sponsor</h2></td><td><img src="img/s2.png"/></td><td><img src="img/s3.jpg"/></td></tr>
+    </table>
+	</center>
     <!-- End WOWSlider.com BODY section -->
-    
+   
     
     
     ';
@@ -987,6 +992,8 @@ function Accommodation(){
 			<tr><td>Double occupancy</td><td>Rs. 9500 + tax per day</td></tr>
 			<tr><td>Sales Manager</td><td>Vishal Pawar</td></tr>
 			<tr><td>Contact Number</td><td>+91-22-61587777 / +91-8879788810</td></tr>
+			<tr><td>Website</td><td><a class="text-primary" href="https://www.marriott.com/en-us/hotels/bomfp-four-points-navi-mumbai-vashi/overview">
+			https://www.marriott.com/en-us/hotels/bomfp-four-points-navi-mumbai-vashi	</a></td></tr>
 			<tr><td> INCLUSIONS:<br/>
 
      * Complimentary Buffet Breakfast at Asian Kitchen Restaurant.<br/>
@@ -1004,6 +1011,7 @@ function Accommodation(){
 			<tr><td>Extra Bed charges for Triple occ.</td><td>Rs. 1000 + 12% tax per day</td></tr>
 			<tr><td>Sales Manager</td><td>Kiran Jadhav</td></tr>
 			<tr><td>Contact Number</td><td>+91-022-68541100 / +91-8879651106 </td></tr>
+			<tr><td>Website</td><td><a class="text-primary" href="https://www.fernhotels.com/the-fern-residency-mumbai">https://www.fernhotels.com/the-fern-residency-mumbai</a></td></tr>
 
 			<tr><td> INCLUSION :<br/>
 			Accommodation.
@@ -1020,11 +1028,14 @@ function Accommodation(){
 			<tr><td><h3>HOTEL BROADWAY, Chembur</h3></td><td></td></tr>
 			<tr><td>Single occupancy</td><td>Rs. 2750 + tax per day </td></tr>
 			<tr><td>Double occupancy></td><td>Rs. 3250 + tax per day</td></tr>
-			<tr><td></td><td></td></tr>
+			<tr><td>Email</td><td class="text-primary">hotelbroadway2009@yahoo.co.in</td></tr>
 			</table>
 
+<br/>
 
-			
+<h3 class="text-primary"> Travel Assistance</h3>
+The society has decided to offer travel grant (Limited to maximum III AC to and fro rail fare) to young researchers (up to the age of 30 years as on 30.07.2023), who wish to attend the conference and present their work. Those desirous of availing this grant should write to the secretary along with the extended abstract latest by 15 September 2023. The society will convey the decision of travel grant latest by 01 October 2023.	
+		
 <!--<a class="btn" href="#">Read More</a>-->
 </p>
                     
@@ -1113,8 +1124,7 @@ Technology,<br/> Russia
 					Prof. Y. Mao,<br/> Illinois Institute of Technology,<br/> USA 
 				</speaker>
 			</div>
-
-			<div class="col-2 text-center">
+<div class="col-2 text-center">
 			    <img src="img/speakers/6.JPG" width="80%"><br/>
 			    	<speaker class="font-weight-bold">
 					Dr. OP Bahl, ,<br/> ICS,<br/> India 
@@ -1122,11 +1132,51 @@ Technology,<br/> Russia
 			</div>
 
 
+			<div class="col-2 text-center">
+			    <img src="img/speakers/7.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. Juan Jose Vilatela,<br/> IMDEA Materials Institute, <br/>Spain 
+				</speaker>
+			</div>
 
+<div class="col-2 text-center">
+			    <img src="img/speakers/8.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. A. K. Tyagi, ,<br/> BARC,<br/> India 
+				</speaker>
+			</div>
+<div class="col-2 text-center">
+			    <img src="img/speakers/9.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. P. K. Jain, ,<br/> ARCI,<br/> India 
+				</speaker>
+			</div>
 
+<div class="col-2 text-center">
+			    <img src="img/speakers/10.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. P. K. Mohapatra, ,<br/> BARC,<br/> India 
+				</speaker>
+			</div>
+</div>
+<br/>
+<p class="text-center"><h3 class="text-warning">Other Speakers</h3></p>
+<table class="table table-bordered table-striped text-light">
+<tr><td> Prof. Indranil lahiri</td><td>IITR</td></tr>
+<tr><td>Prof. Amartya Mukhopadhyay</td><td>IITB</td></tr>
+<tr><td>Prof. Sanghamitra Chatterjee</td><td>ICT</td></tr>
+<tr><td>Prof. Debrupa Lahiri</td><td>IITR</td></tr>
+<tr><td>Prof. Kantesh Balani</td><td>IITK</td></tr>
+<tr><td>Prof. Bhanu Pratap Singh</td><td>NPL</td></tr>
+<tr><td>Prof. Suresh Gokhale</td><td>NCL, Pune</td></tr>
+<tr><td>Dr. A.S. Prakash</td><td>CSIR-CECRI</td></tr>
+<tr><td>Prof. S.SRIKANTASWAMY</td><td>DEPT. OF STUDIES IN ENVIRONMENTAL SCIENCE, MANSAGANGOTRI, UNIVERSITY OF MYSORE</td></tr>
+<tr><td>Prof. Sanjay Dhakate</td><td>NPL</td></tr>
+<tr><td>Prof. Jitendra Bahadur</td><td>BARC</td></tr>
 
+</table>
 
-	      </div>';
+';
 return $speakersMsg;
     
 
@@ -1706,7 +1756,7 @@ function Upload_Contribution(){
             <br>
             <strong>Deadlines</strong>
             
-            <ul><li><strong>Deadline of abstract submission is July 30, 2023</strong></li>
+            <ul><li><strong>Deadline of abstract submission is August 30, 2023</strong></li>
             </ul>
             </p>
             

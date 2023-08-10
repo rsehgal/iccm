@@ -92,7 +92,7 @@ function IccmMenu(){
                         <!-- <a href="speakers.html" class="nav-item nav-link iccmMenu" id="Speakers" value="Speakers">Speakers</a> -->
                         <a href="venue.html" class="nav-item nav-link iccmMenu" id="Venue" value="Venue">Venue</a>
                         <a href="accommodation.html" class="nav-item nav-link iccmMenu" id="Accommodation" value="Accommodation">Accommodation</a>
-                        <a href="sponsors.html" class="nav-item nav-link iccmMenu" id="Sponsor" value="Sponsor">Sponsor</a>
+                        <!-- <a href="sponsors.html" class="nav-item nav-link iccmMenu" id="Sponsor" value="Sponsor">Sponsor</a> -->
                          <div class="nav-item dropdown">
                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" value="Awards">Awards</a>
                          <div class="dropdown-menu">
@@ -107,7 +107,7 @@ function IccmMenu(){
                           <a href="#" class="nav-link dropdown-toggle iccmMenu" data-toggle="dropdown" value="Downloads">Downloads</a>
                             <div class="dropdown-menu">
                                 <a href="pdf/Brochure ICCM 2023.pdf" target="_blank" class="dropdown-item"> Conference Brochure</a>
-                                <a href="#" target="_blank" class="dropdown-item"> Registration Form</a>
+                                <!--<a href="#" target="_blank" class="dropdown-item"> Registration Form</a>-->
                               
                             </div>
                       </div>

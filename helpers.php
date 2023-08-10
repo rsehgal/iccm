@@ -66,6 +66,8 @@ C/o Materials Group, Bhabha Atomic Research Centre, Mumbai – 400085<br>
                        &nbsp;
                    </div>
                </div>-->
+
+		<!--
                <div class="col-md-6 col-lg-2">
                    <div class="footer-link">
                        <h2>Quick Links</h2>
@@ -77,13 +79,10 @@ C/o Materials Group, Bhabha Atomic Research Centre, Mumbai – 400085<br>
                    <div class="footer-social">
                            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                           <!--<a href=""><i class="fab fa-youtube"></i></a>-->
                           
                        </div>
-                   
-                 
                </div>
-               
+               -->
                <div class="col-md-6 col-lg-3">
                    <div class="newsletter">
                       
