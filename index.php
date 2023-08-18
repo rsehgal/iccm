@@ -235,6 +235,7 @@ $("#Home").trigger("click");
 <!-- Page Header Start -->
 <div id='iccmheader' class='' ></div>
 <!-- <div class='text-center bg-dark text-light font-weight-bold'> -->
+<marquee class="font-weight-bold"><mark class='highlight'>Selected papers will be published in the journal <i class="text-danger"><u>"Diamond and Related Materials, Elsevier"</u></i></mark></marquee>
 <div class='text-center text-danger font-weight-bold'>
 <div id='YourTasks' class='iccmMenu' ><b><mark class='text-dark'>YourTasks</mark></b></div>
 </div>
