@@ -322,8 +322,8 @@ function Home(){
                 <table width="100%" border="0">
     <tr align="center">
     <td align="center" valign="top">
-    <img src="img/org committee/2.jpg" width="50%" class="logocontrol">
-    <img src="img/org committee/2.jpg" width="80%" class="logocontrol2">
+    <img src="img/org committee/2.png" width="50%" class="logocontrol">
+    <img src="img/org committee/2.png" width="80%" class="logocontrol2">
     </td>
     </tr>
     <tr style="font-size:15px;">
