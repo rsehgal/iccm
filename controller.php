@@ -202,7 +202,8 @@ function Home(){
     
     
     <h1 class="text-red blink-soft">
-    <span style="color:#900;"><strong> Deadline of abstract (extended) submission is September 07, 2023 </strong></span> 
+    <!-- <span style="color:#900;"><strong> Deadline of abstract (extended) submission is September 07, 2023 </strong></span>  -->
+    <span style="color:#900;"><strong> Last date of the abstract submission is over. </strong></span> 
     </h1>
     <br>
     
