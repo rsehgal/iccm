@@ -1120,12 +1120,6 @@ Technology,<br/> Russia
 				</speaker>
 			</div>
 			<div class="col-2 text-center">
-			    <img src="img/speakers/5.jpg" width="80%"><br/>
-			    	<speaker class="font-weight-bold">
-					Prof. Y. Mao,<br/> Illinois Institute of Technology,<br/> USA 
-				</speaker>
-			</div>
-<div class="col-2 text-center">
 			    <img src="img/speakers/6.JPG" width="80%"><br/>
 			    	<speaker class="font-weight-bold">
 					Dr. OP Bahl, ,<br/> ICS,<br/> India 
