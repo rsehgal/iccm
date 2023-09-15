@@ -611,7 +611,7 @@ $homeMsg.='
     <center>
     <table class="text-center">
 	<tr><td><h2>Platinum Sponsor</h2></td><td><img src="img/s1.png"/></td><td></td></tr>
-	<tr><td><h2>Gold Sponsor</h2></td><td><img src="img/s2.png"/></td><td><img src="img/s3.jpg"/></td></tr>
+	<tr><td><h2>Gold Sponsor</h2></td><td><img src="img/s2.png"/></td><td><img src="img/s3.png"/></td></tr>
     </table>
 	</center>
     <!-- End WOWSlider.com BODY section -->
