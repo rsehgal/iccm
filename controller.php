@@ -1094,7 +1094,7 @@ function Speakers(){
 $speakersMsg='
 		<div class="row text-light">                
 			<div class="col-2 text-center">
-			    <img src="img/speakers/1.jpg" width="80%"><br/>
+			    <img src="img/speakers/marc.jpg" width="80%"><br/>
 			    	<speaker class="font-weight-bold">
 					Prof.Marc Monthioux,<br/> CEMES,<br/> France 
 				</speaker>
@@ -1147,12 +1147,34 @@ Technology,<br/> Russia
 				</speaker>
 			</div>
 
-<div class="col-2 text-center">
+			<div class="col-2 text-center">
 			    <img src="img/speakers/10.jpg" width="80%"><br/>
 			    	<speaker class="font-weight-bold">
 					Prof. P. K. Mohapatra, ,<br/> BARC,<br/> India 
 				</speaker>
 			</div>
+			<div class="col-2 text-center">
+			    <img src="img/speakers/bruno.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Prof. Bruno Azeredo, <br/>Arizona State University,<br/> USA 
+				</speaker>
+			</div>
+			<div class="col-2 text-center">
+			    <img src="img/speakers/ravi.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					 Dr. Ravisankar Naraparaju, <br/>German Aerospace Center,<br/> Germany 
+				</speaker>
+			</div>
+
+
+			<div class="col-2 text-center">
+			    <img src="img/speakers/uday.jpg" width="80%"><br/>
+			    	<speaker class="font-weight-bold">
+					Dr. A. Udayakumar, <br/> CSIR-National Aerospace Laboratories,<br/> India 
+				</speaker>
+			</div>
+			
+
 </div>
 <br/>
 <p class="text-center"><h3 class="text-warning">Other Speakers</h3></p>
@@ -1167,7 +1189,9 @@ Technology,<br/> Russia
 <tr><td>Dr. A.S. Prakash</td><td>CSIR-CECRI</td></tr>
 <tr><td>Prof. S.SRIKANTASWAMY</td><td>DEPT. OF STUDIES IN ENVIRONMENTAL SCIENCE, MANSAGANGOTRI, UNIVERSITY OF MYSORE</td></tr>
 <tr><td>Prof. Sanjay Dhakate</td><td>NPL</td></tr>
-<tr><td>Prof. Jitendra Bahadur</td><td>BARC</td></tr>
+<tr><td>Prof. Viswanath Balakrishnan</td><td>IIT Mandi</td></tr>
+<tr><td>Dr Anil Kumar</td><td>Director, High Temperature Composites Group, ASL, DRDO, Hyderabad</td></tr>
+<tr><td>Dr. Vikas B. Thakare</td><td>Associate Director, DR&DE, DRDO Gwalior</td></tr>
 
 </table>
 
